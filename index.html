@@ -1595,6 +1595,582 @@ this.style.color="#272322";
 
 </script>
 
+<!-- SHRIGEHNA FUNCTIONAL UPGRADE -->
 
+<style>
+/* SEARCH OVERLAY */
+.search-overlay{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(255,255,255,.98);
+    z-index:9999;
+    display:none;
+    padding:80px 7%;
+}
+
+.search-overlay.active{
+    display:block;
+}
+
+.search-close{
+    position:absolute;
+    right:7%;
+    top:35px;
+    font-size:28px;
+    cursor:pointer;
+}
+
+.search-title{
+    font-family:"Playfair Display",serif;
+    font-size:35px;
+    margin-bottom:25px;
+}
+
+.search-input{
+    width:100%;
+    padding:18px 5px;
+    font-size:22px;
+    border:none;
+    border-bottom:1px solid #aaa;
+    outline:none;
+}
+
+.search-results{
+    margin-top:30px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+}
+
+.search-item{
+    background:#faf7f2;
+    padding:20px;
+}
+
+.search-item h4{
+    font-size:14px;
+    margin-bottom:7px;
+}
+
+.search-item p{
+    font-size:12px;
+    color:#6b2335;
+}
+
+/* CATEGORY PRODUCTS */
+
+.collection-products{
+    display:none;
+    padding:70px 5%;
+    background:#faf7f2;
+}
+
+.collection-products.active{
+    display:block;
+}
+
+.collection-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:35px;
+}
+
+.collection-top h2{
+    font-family:"Playfair Display",serif;
+    font-size:38px;
+    font-weight:500;
+}
+
+.close-collection{
+    cursor:pointer;
+    font-size:12px;
+    border-bottom:1px solid #333;
+}
+
+.collection-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.collection-card{
+    background:white;
+    position:relative;
+}
+
+.collection-card img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+}
+
+.collection-info{
+    padding:15px;
+}
+
+.collection-info h3{
+    font-size:14px;
+    font-weight:500;
+}
+
+.collection-info p{
+    font-size:12px;
+    margin-top:7px;
+    font-weight:600;
+}
+
+.collection-info button{
+    width:100%;
+    margin-top:13px;
+    padding:11px;
+    background:white;
+    border:1px solid #6b2335;
+    color:#6b2335;
+    cursor:pointer;
+}
+
+.collection-info button:hover{
+    background:#6b2335;
+    color:white;
+}
+
+.cart-badge{
+    position:absolute;
+    background:#6b2335;
+    color:white;
+    font-size:8px;
+    border-radius:50%;
+    min-width:17px;
+    height:17px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-left:10px;
+    margin-top:-8px;
+}
+
+@media(max-width:700px){
+    .collection-grid,
+    .search-results{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .collection-card img{
+        height:220px;
+    }
+}
+</style>
+
+
+<!-- SEARCH WINDOW -->
+
+<div class="search-overlay" id="searchOverlay">
+
+<div class="search-close" onclick="closeSearch()">×</div>
+
+<div class="search-title">
+What are you looking for?
+</div>
+
+<input
+class="search-input"
+id="searchInput"
+type="text"
+placeholder="Search earrings, rings, necklaces..."
+onkeyup="searchProducts()">
+
+<div class="search-results" id="searchResults"></div>
+
+</div>
+
+
+<!-- CATEGORY COLLECTION -->
+
+<div class="collection-products" id="collectionProducts">
+
+<div class="collection-top">
+
+<h2 id="collectionTitle">
+Collection
+</h2>
+
+<span class="close-collection" onclick="closeCollection()">
+CLOSE ×
+</span>
+
+</div>
+
+<div class="collection-grid" id="collectionGrid"></div>
+
+</div>
+
+
+<script>
+
+const shrigehnaProducts = [
+
+{
+name:"Meher Gold Jhumkas",
+category:"earrings",
+price:"₹1,499",
+image:"https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=600&q=80"
+},
+
+{
+name:"Aarohi Drop Earrings",
+category:"earrings",
+price:"₹1,199",
+image:"https://images.unsplash.com/photo-1635767798638-3e25273a8236?auto=format&fit=crop&w=600&q=80"
+},
+
+{
+name:"Noor Statement Earrings",
+category:"earrings",
+price:"₹1,699",
+image:"https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?auto=format&fit=crop&w=600&q=80"
+},
+
+{
+name:"Tara Everyday Earrings",
+category:"earrings",
+price:"₹899",
+image:"https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=600&q=80"
+},
+
+
+{
+name:"Riwaaz Necklace",
+category:"necklaces",
+price:"₹2,499",
+image:"https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=600&q=80"
+},
+
+{
+name:"Meera Pendant",
+category:"necklaces",
+price:"₹1,699",
+image:"https://images.unsplash.com/photo-1599643477877-530eb83abc8e?auto=format&fit=crop&w=600&q=80"
+},
+
+{
+name:"Saanvi Layered Necklace",
+category:"necklaces",
+price:"₹2,799",
+image:"https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=600&q=80"
+},
+
+{
+name:"Aisha Gold Necklace",
+category:"necklaces",
+price:"₹2,299",
+image:"https://images.unsplash.com/photo-1601121141461-9d6647bca1ed?auto=format&fit=crop&w=600&q=80"
+},
+
+
+{
+name:"Gauri Statement Ring",
+category:"rings",
+price:"₹999",
+image:"https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=600&q=80"
+},
+
+{
+name:"Avni Gold Ring",
+category:"rings",
+price:"₹1,199",
+image:"https://images.unsplash.com/photo-1603561596112-db1d31437b8a?auto=format&fit=crop&w=600&q=80"
+},
+
+{
+name:"Kiara Minimal Ring",
+category:"rings",
+price:"₹799",
+image:"https://images.unsplash.com/photo-1598560917807-1bae44bd2be8?auto=format&fit=crop&w=600&q=80"
+},
+
+{
+name:"Ishita Cocktail Ring",
+category:"rings",
+price:"₹1,399",
+image:"https://images.unsplash.com/photo-1627293509201-cd0c780043e6?auto=format&fit=crop&w=600&q=80"
+},
+
+
+{
+name:"Suhani Kada",
+category:"bangles",
+price:"₹1,799",
+image:"https://images.unsplash.com/photo-1619119069152-a2b331eb392a?auto=format&fit=crop&w=600&q=80"
+},
+
+{
+name:"Rani Gold Bangles",
+category:"bangles",
+price:"₹1,999",
+image:"https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&w=600&q=80"
+},
+
+{
+name:"Aanya Bracelet",
+category:"bangles",
+price:"₹1,299",
+image:"https://images.unsplash.com/photo-1611085583191-a3b181a88401?auto=format&fit=crop&w=600&q=80"
+},
+
+{
+name:"Naina Everyday Bracelet",
+category:"bangles",
+price:"₹1,099",
+image:"https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=600&q=80"
+}
+
+];
+
+
+let bagCount = 0;
+
+
+/* SEARCH */
+
+const searchButton =
+document.querySelector(".search");
+
+if(searchButton){
+
+searchButton.style.cursor="pointer";
+
+searchButton.onclick=function(){
+
+document
+.getElementById("searchOverlay")
+.classList.add("active");
+
+document
+.getElementById("searchInput")
+.focus();
+
+};
+
+}
+
+
+function closeSearch(){
+
+document
+.getElementById("searchOverlay")
+.classList.remove("active");
+
+}
+
+
+function searchProducts(){
+
+const query =
+document
+.getElementById("searchInput")
+.value
+.toLowerCase();
+
+const results =
+document.getElementById("searchResults");
+
+results.innerHTML="";
+
+if(query.length===0){
+return;
+}
+
+const filtered =
+shrigehnaProducts.filter(product =>
+product.name.toLowerCase().includes(query) ||
+product.category.includes(query)
+);
+
+
+if(filtered.length===0){
+
+results.innerHTML =
+"<p>No jewellery found. Try earrings, rings, necklaces or bangles.</p>";
+
+return;
+
+}
+
+
+filtered.forEach(product => {
+
+results.innerHTML += `
+
+<div class="search-item">
+
+<h4>${product.name}</h4>
+
+<p>${product.price}</p>
+
+</div>
+
+`;
+
+});
+
+}
+
+
+/* CATEGORY */
+
+function openCollection(category){
+
+const products =
+shrigehnaProducts.filter(
+product => product.category===category
+);
+
+const grid =
+document.getElementById("collectionGrid");
+
+grid.innerHTML="";
+
+
+products.forEach(product => {
+
+grid.innerHTML += `
+
+<div class="collection-card">
+
+<img src="${product.image}"
+alt="${product.name}">
+
+<div class="collection-info">
+
+<h3>${product.name}</h3>
+
+<p>${product.price}</p>
+
+<button onclick="addToBag(this)">
+ADD TO BAG
+</button>
+
+</div>
+
+</div>
+
+`;
+
+});
+
+
+document.getElementById("collectionTitle")
+.innerText =
+category.charAt(0).toUpperCase()
++ category.slice(1);
+
+
+const collection =
+document.getElementById("collectionProducts");
+
+collection.classList.add("active");
+
+collection.scrollIntoView({
+behavior:"smooth"
+});
+
+}
+
+
+function closeCollection(){
+
+document
+.getElementById("collectionProducts")
+.classList.remove("active");
+
+}
+
+
+/* CONNECT NAV LINKS */
+
+document
+.querySelectorAll('a[href="#rings"]')
+.forEach(link => {
+
+link.onclick=function(event){
+
+event.preventDefault();
+
+openCollection("rings");
+
+};
+
+});
+
+
+document
+.querySelectorAll('a[href="#earrings"]')
+.forEach(link => {
+
+link.onclick=function(event){
+
+event.preventDefault();
+
+openCollection("earrings");
+
+};
+
+});
+
+
+document
+.querySelectorAll('a[href="#necklaces"]')
+.forEach(link => {
+
+link.onclick=function(event){
+
+event.preventDefault();
+
+openCollection("necklaces");
+
+};
+
+});
+
+
+document
+.querySelectorAll('a[href="#bangles"]')
+.forEach(link => {
+
+link.onclick=function(event){
+
+event.preventDefault();
+
+openCollection("bangles");
+
+};
+
+});
+
+
+/* ADD TO BAG */
+
+function addToBag(button){
+
+bagCount++;
+
+button.innerText="ADDED ✓";
+
+button.style.background="#6b2335";
+button.style.color="white";
+
+setTimeout(function(){
+
+button.innerText="ADD TO BAG";
+
+},1500);
+
+}
+
+</script>
 </body>
 </html>
