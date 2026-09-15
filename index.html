@@ -4,457 +4,1597 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>SHRIGEHNA | श्री गहना</title>
+<title>SHRIGEHNA | Jewellery for Every Story</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600&family=Noto+Serif+Devanagari:wght@500&display=swap" rel="stylesheet">
 
 <style>
+
+:root{
+--wine:#6b2335;
+--wine-dark:#481522;
+--cream:#faf7f2;
+--beige:#f2e8df;
+--gold:#b58a59;
+--text:#272322;
+--grey:#777;
+--border:#e9e5e1;
+}
+
 *{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+
+html{
+scroll-behavior:smooth;
 }
 
 body{
-    font-family:Arial, sans-serif;
-    background:#fffaf7;
-    color:#402c27;
+font-family:"DM Sans",sans-serif;
+color:var(--text);
+background:#fff;
 }
 
-.topbar{
-    background:#5b2730;
-    color:white;
-    text-align:center;
-    padding:10px;
-    font-size:13px;
+a{
+text-decoration:none;
+color:inherit;
 }
+
+img{
+width:100%;
+display:block;
+}
+
+/* ANNOUNCEMENT */
+
+.announcement{
+background:var(--wine);
+color:white;
+height:35px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:11px;
+letter-spacing:.5px;
+}
+
+/* HEADER */
 
 header{
-    background:white;
-    padding:20px 7%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    border-bottom:1px solid #eee;
+background:white;
+position:sticky;
+top:0;
+z-index:1000;
+border-bottom:1px solid var(--border);
+}
+
+.header-main{
+height:80px;
+padding:0 5%;
+display:grid;
+grid-template-columns:1fr auto 1fr;
+align-items:center;
+}
+
+.search{
+font-size:13px;
+color:#555;
+}
+
+.search span{
+font-size:18px;
+margin-right:7px;
 }
 
 .logo{
-    text-align:center;
+text-align:center;
 }
 
-.logo h2{
-    font-family:Georgia, serif;
-    letter-spacing:4px;
-    font-size:26px;
+.logo .hindi{
+font-family:"Noto Serif Devanagari",serif;
+font-size:17px;
+color:var(--wine);
+line-height:1;
 }
 
-.logo p{
-    font-size:13px;
-    margin-top:3px;
-    color:#8c675b;
+.logo h1{
+font-family:"Playfair Display",serif;
+font-size:25px;
+letter-spacing:5px;
+font-weight:600;
 }
 
-nav a{
-    margin:0 14px;
-    text-decoration:none;
-    color:#402c27;
-    font-size:14px;
+.icons{
+display:flex;
+justify-content:flex-end;
+gap:20px;
+font-size:19px;
 }
+
+.nav{
+height:45px;
+display:flex;
+align-items:center;
+justify-content:center;
+gap:38px;
+border-top:1px solid #f4f1ee;
+font-size:12px;
+}
+
+.nav a{
+transition:.2s;
+}
+
+.nav a:hover{
+color:var(--wine);
+}
+
+.sale{
+color:#b0273d;
+}
+
+/* HERO */
 
 .hero{
-    min-height:560px;
-    display:flex;
-    align-items:center;
-    padding:70px 8%;
-    background:linear-gradient(120deg,#f8e8df,#ead1c4);
+height:620px;
+background:
+linear-gradient(90deg,rgba(246,235,224,.97) 0%,rgba(246,235,224,.82) 45%,rgba(246,235,224,.15) 70%),
+url("https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=1800&q=85");
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+padding:0 8%;
 }
 
 .hero-content{
-    max-width:600px;
+max-width:540px;
 }
 
-.small{
-    letter-spacing:3px;
-    font-size:12px;
-    color:#925d50;
-    margin-bottom:18px;
+.hero-small{
+font-size:11px;
+letter-spacing:3px;
+color:var(--wine);
+font-weight:600;
+margin-bottom:18px;
 }
 
-.hero h1{
-    font-family:Georgia,serif;
-    font-size:64px;
-    font-weight:normal;
-    line-height:1.05;
+.hero h2{
+font-family:"Playfair Display",serif;
+font-size:62px;
+line-height:1.08;
+font-weight:500;
 }
 
-.hero h1 span{
-    color:#8b4850;
+.hero h2 span{
+color:var(--wine);
 }
 
 .hero p{
-    margin:25px 0;
-    line-height:1.8;
-    max-width:500px;
-    color:#68524b;
+font-size:14px;
+line-height:1.8;
+color:#625954;
+margin:22px 0 30px;
+max-width:470px;
 }
 
 .button{
-    display:inline-block;
-    background:#5b2730;
-    color:white;
-    text-decoration:none;
-    padding:15px 28px;
-    font-size:13px;
+display:inline-block;
+background:var(--wine);
+color:white;
+padding:15px 28px;
+font-size:11px;
+letter-spacing:1px;
+border:1px solid var(--wine);
+transition:.3s;
 }
+
+.button:hover{
+background:white;
+color:var(--wine);
+}
+
+/* BENEFITS */
+
+.benefits{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+border-bottom:1px solid var(--border);
+}
+
+.benefit{
+padding:20px;
+text-align:center;
+font-size:11px;
+border-right:1px solid var(--border);
+}
+
+.benefit strong{
+display:block;
+font-size:12px;
+margin-bottom:4px;
+}
+
+.benefit span{
+color:#888;
+font-size:10px;
+}
+
+/* GENERAL */
 
 section{
-    padding:75px 7%;
+padding:75px 5%;
 }
 
-.heading{
-    text-align:center;
-    margin-bottom:45px;
+.section-heading{
+text-align:center;
+margin-bottom:42px;
 }
 
-.heading p{
-    color:#9a6759;
-    letter-spacing:2px;
-    font-size:11px;
+.section-heading span{
+font-size:10px;
+letter-spacing:2px;
+color:var(--wine);
 }
 
-.heading h2{
-    font-family:Georgia,serif;
-    font-size:42px;
-    margin-top:10px;
+.section-heading h2{
+font-family:"Playfair Display",serif;
+font-size:38px;
+font-weight:500;
+margin-top:7px;
 }
 
-.categories{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:20px;
+/* CATEGORIES */
+
+.category-grid{
+display:grid;
+grid-template-columns:repeat(6,1fr);
+gap:25px;
 }
 
 .category{
-    background:#f3e3da;
-    min-height:220px;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    padding:20px;
+text-align:center;
+cursor:pointer;
 }
 
-.category .icon{
-    font-size:55px;
-    margin-bottom:20px;
+.category-image{
+aspect-ratio:1/1;
+border-radius:50%;
+overflow:hidden;
+background:#eee5dd;
+margin-bottom:15px;
+}
+
+.category-image img{
+height:100%;
+object-fit:cover;
+transition:.4s;
+}
+
+.category:hover img{
+transform:scale(1.06);
 }
 
 .category h3{
-    font-family:Georgia,serif;
-    font-size:24px;
+font-size:13px;
+font-weight:500;
 }
 
 .category p{
-    margin-top:8px;
-    font-size:12px;
-    color:#7a625a;
+font-size:10px;
+color:#888;
+margin-top:4px;
 }
 
-.products{
-    background:white;
+/* PRODUCTS */
+
+.products-section{
+background:var(--cream);
 }
 
 .product-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:20px;
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:18px;
 }
 
 .product{
-    background:#fffaf7;
-    padding-bottom:20px;
+background:white;
+position:relative;
+overflow:hidden;
 }
 
-.product-image{
-    height:280px;
-    background:linear-gradient(145deg,#ead1c4,#f7e9df);
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-size:75px;
+.product-photo{
+height:360px;
+overflow:hidden;
+background:#f2ede8;
+}
+
+.product-photo img{
+height:100%;
+object-fit:cover;
+transition:.4s;
+}
+
+.product:hover .product-photo img{
+transform:scale(1.035);
+}
+
+.badge{
+position:absolute;
+top:12px;
+left:12px;
+background:var(--wine);
+color:white;
+font-size:9px;
+padding:6px 9px;
+z-index:3;
+}
+
+.wishlist{
+position:absolute;
+right:13px;
+top:12px;
+width:35px;
+height:35px;
+background:white;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:19px;
+z-index:3;
+cursor:pointer;
 }
 
 .product-info{
-    padding:18px 10px;
+padding:17px;
 }
 
-.product h3{
-    font-family:Georgia,serif;
-    font-size:20px;
+.product-info h3{
+font-size:14px;
+font-weight:500;
+margin-bottom:6px;
 }
 
-.product p{
-    color:#8a7167;
-    font-size:12px;
-    margin:6px 0;
+.product-type{
+font-size:10px;
+color:#888;
+margin-bottom:10px;
 }
 
 .price{
-    font-weight:bold;
-    margin-top:10px;
+font-size:13px;
+font-weight:600;
 }
 
-.story{
-    background:#5b2730;
-    color:white;
-    text-align:center;
+.mrp{
+color:#999;
+font-weight:400;
+text-decoration:line-through;
+margin-left:7px;
 }
 
-.story h2{
-    font-family:Georgia,serif;
-    font-size:45px;
-    margin-bottom:20px;
+.discount{
+color:#a32c43;
+font-size:10px;
+margin-left:6px;
 }
 
-.story p{
-    max-width:700px;
-    margin:auto;
-    line-height:1.8;
-    color:#f2deda;
+.add{
+width:100%;
+margin-top:15px;
+padding:12px;
+background:white;
+border:1px solid var(--wine);
+color:var(--wine);
+font-size:10px;
+letter-spacing:1px;
+cursor:pointer;
+transition:.2s;
 }
 
-.contact{
-    text-align:center;
+.add:hover{
+background:var(--wine);
+color:white;
 }
 
-.contact h2{
-    font-family:Georgia,serif;
-    font-size:40px;
+.view-all{
+text-align:center;
+margin-top:40px;
 }
 
-.contact p{
-    margin:15px 0 25px;
-    color:#76615a;
+.view-all a{
+font-size:11px;
+border-bottom:1px solid var(--text);
+padding-bottom:5px;
 }
+
+/* COLLECTION BANNER */
+
+.collection{
+padding:0;
+display:grid;
+grid-template-columns:1fr 1fr;
+min-height:570px;
+}
+
+.collection-image{
+background:
+url("https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=1200&q=85")
+center/cover;
+min-height:570px;
+}
+
+.collection-content{
+background:var(--wine);
+color:white;
+display:flex;
+flex-direction:column;
+justify-content:center;
+padding:9%;
+}
+
+.collection-content span{
+font-size:10px;
+letter-spacing:3px;
+color:#e4c5b2;
+}
+
+.collection-content h2{
+font-family:"Playfair Display",serif;
+font-size:51px;
+font-weight:500;
+line-height:1.1;
+margin:15px 0 20px;
+}
+
+.collection-content p{
+font-size:13px;
+line-height:1.8;
+color:#eddde0;
+max-width:500px;
+margin-bottom:27px;
+}
+
+.light-button{
+display:inline-block;
+width:max-content;
+background:white;
+color:var(--wine);
+padding:14px 27px;
+font-size:10px;
+letter-spacing:1px;
+}
+
+/* SHOP FOR */
+
+.shop-for-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+}
+
+.shop-for{
+height:470px;
+position:relative;
+overflow:hidden;
+}
+
+.shop-for img{
+height:100%;
+object-fit:cover;
+transition:.4s;
+}
+
+.shop-for:hover img{
+transform:scale(1.04);
+}
+
+.shop-for-text{
+position:absolute;
+bottom:0;
+left:0;
+right:0;
+padding:70px 25px 25px;
+background:linear-gradient(transparent,rgba(0,0,0,.72));
+color:white;
+}
+
+.shop-for-text h3{
+font-family:"Playfair Display",serif;
+font-size:29px;
+font-weight:500;
+}
+
+.shop-for-text a{
+font-size:10px;
+display:inline-block;
+margin-top:10px;
+border-bottom:1px solid white;
+padding-bottom:3px;
+}
+
+/* BRAND */
+
+.brand-story{
+background:#f4e9e0;
+display:grid;
+grid-template-columns:1fr 1fr;
+align-items:center;
+gap:7%;
+}
+
+.brand-picture{
+height:500px;
+background:#dfc9b7;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.brand-mark{
+width:260px;
+height:310px;
+border:1px solid var(--gold);
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+color:var(--wine);
+}
+
+.brand-mark .hindi{
+font-family:"Noto Serif Devanagari";
+font-size:45px;
+}
+
+.brand-mark strong{
+font-family:"Playfair Display";
+letter-spacing:5px;
+font-size:18px;
+margin-top:12px;
+}
+
+.brand-copy span{
+font-size:10px;
+letter-spacing:2px;
+color:var(--wine);
+}
+
+.brand-copy h2{
+font-family:"Playfair Display";
+font-size:47px;
+font-weight:500;
+line-height:1.1;
+margin:13px 0 20px;
+}
+
+.brand-copy p{
+font-size:13px;
+line-height:1.9;
+color:#71645e;
+max-width:550px;
+margin-bottom:15px;
+}
+
+/* REVIEWS */
+
+.reviews{
+background:white;
+}
+
+.review-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+}
+
+.review{
+border:1px solid var(--border);
+padding:32px;
+text-align:center;
+}
+
+.stars{
+color:#b68b55;
+letter-spacing:3px;
+font-size:13px;
+}
+
+.review p{
+font-family:"Playfair Display";
+font-size:18px;
+line-height:1.5;
+margin:17px 0;
+}
+
+.review strong{
+font-size:10px;
+letter-spacing:1px;
+}
+
+/* INSTAGRAM */
+
+.instagram{
+background:var(--cream);
+}
+
+.instagram-grid{
+display:grid;
+grid-template-columns:repeat(5,1fr);
+gap:8px;
+}
+
+.instagram-grid div{
+aspect-ratio:1/1;
+overflow:hidden;
+}
+
+.instagram-grid img{
+height:100%;
+object-fit:cover;
+transition:.4s;
+}
+
+.instagram-grid img:hover{
+transform:scale(1.06);
+}
+
+/* NEWSLETTER */
+
+.newsletter{
+background:var(--wine-dark);
+color:white;
+text-align:center;
+padding:60px 20px;
+}
+
+.newsletter h2{
+font-family:"Playfair Display";
+font-size:35px;
+font-weight:500;
+}
+
+.newsletter p{
+font-size:11px;
+color:#d9c8cc;
+margin:10px 0 23px;
+}
+
+.newsletter form{
+max-width:500px;
+margin:auto;
+display:flex;
+}
+
+.newsletter input{
+flex:1;
+padding:15px;
+border:none;
+outline:none;
+}
+
+.newsletter button{
+border:none;
+background:var(--gold);
+color:white;
+padding:0 25px;
+font-size:10px;
+cursor:pointer;
+}
+
+/* FOOTER */
 
 footer{
-    background:#2e1b1e;
-    color:#ddd;
-    padding:40px 7%;
-    text-align:center;
+background:#241c1e;
+color:#bbb;
+padding:60px 6% 25px;
 }
 
-footer h2{
-    font-family:Georgia,serif;
-    letter-spacing:4px;
-    color:white;
+.footer-grid{
+display:grid;
+grid-template-columns:2fr 1fr 1fr 1fr;
+gap:60px;
 }
 
-footer p{
-    margin-top:10px;
-    font-size:12px;
+.footer-logo h2{
+font-family:"Playfair Display";
+color:white;
+letter-spacing:4px;
 }
 
-@media(max-width:800px){
-
-    nav{
-        display:none;
-    }
-
-    .hero h1{
-        font-size:45px;
-    }
-
-    .categories,
-    .product-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
+.footer-logo .hindi{
+font-family:"Noto Serif Devanagari";
+color:#d4b393;
+font-size:18px;
+margin-bottom:10px;
 }
+
+footer h4{
+color:white;
+font-size:10px;
+letter-spacing:1px;
+margin-bottom:17px;
+}
+
+footer p,
+footer a{
+display:block;
+font-size:10px;
+line-height:2.1;
+color:#b8abad;
+}
+
+.copyright{
+text-align:center;
+border-top:1px solid #423639;
+margin-top:45px;
+padding-top:20px;
+font-size:9px;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+position:fixed;
+right:22px;
+bottom:22px;
+width:55px;
+height:55px;
+border-radius:50%;
+background:#25D366;
+color:white;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:24px;
+z-index:1000;
+box-shadow:0 5px 20px #0003;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.nav{
+overflow:auto;
+justify-content:flex-start;
+padding:0 20px;
+gap:25px;
+}
+
+.search{
+font-size:0;
+}
+
+.header-main{
+padding:0 4%;
+}
+
+.category-grid{
+grid-template-columns:repeat(3,1fr);
+}
+
+.product-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.collection,
+.brand-story{
+grid-template-columns:1fr;
+}
+
+.shop-for-grid{
+grid-template-columns:1fr 1fr;
+}
+
+.review-grid{
+grid-template-columns:1fr;
+}
+
+.footer-grid{
+grid-template-columns:1fr 1fr;
+}
+
+}
+
+@media(max-width:600px){
+
+.announcement{
+font-size:9px;
+}
+
+.logo h1{
+font-size:18px;
+letter-spacing:3px;
+}
+
+.logo .hindi{
+font-size:14px;
+}
+
+.icons{
+gap:11px;
+font-size:16px;
+}
+
+.hero{
+height:600px;
+background-position:62% center;
+padding:0 6%;
+align-items:flex-end;
+padding-bottom:65px;
+}
+
+.hero-content{
+background:rgba(250,247,242,.90);
+padding:25px;
+}
+
+.hero h2{
+font-size:42px;
+}
+
+.benefits{
+grid-template-columns:1fr 1fr;
+}
+
+.category-grid{
+grid-template-columns:repeat(3,1fr);
+gap:13px;
+}
+
+.category h3{
+font-size:11px;
+}
+
+.product-photo{
+height:270px;
+}
+
+.product-grid{
+gap:8px;
+}
+
+.product-info{
+padding:12px;
+}
+
+.shop-for-grid{
+grid-template-columns:1fr;
+}
+
+.shop-for{
+height:420px;
+}
+
+.instagram-grid{
+grid-template-columns:repeat(3,1fr);
+}
+
+.footer-grid{
+grid-template-columns:1fr 1fr;
+gap:35px;
+}
+
+section{
+padding:60px 4%;
+}
+
+.section-heading h2{
+font-size:32px;
+}
+
+.collection-content h2{
+font-size:40px;
+}
+
+}
+
 </style>
 </head>
 
+
 <body>
 
-<div class="topbar">
-✨ Welcome to SHRIGEHNA — Jewellery for every beautiful moment ✨
+<div class="announcement">
+FREE SHIPPING ABOVE ₹1,499 &nbsp; | &nbsp; EASY RETURNS &nbsp; | &nbsp; FESTIVE EDIT NOW LIVE
 </div>
+
 
 <header>
 
-<div class="logo">
-<h2>SHRIGEHNA</h2>
-<p>श्री गहना</p>
+<div class="header-main">
+
+<div class="search">
+<span>⌕</span> Search jewellery
 </div>
 
-<nav>
-<a href="#home">Home</a>
-<a href="#collections">Collections</a>
-<a href="#shop">Shop</a>
-<a href="#about">Our Story</a>
-<a href="#contact">Contact</a>
-</nav>
+<div class="logo">
+<div class="hindi">श्री गहना</div>
+<h1>SHRIGEHNA</h1>
+</div>
 
-<div>♡ &nbsp; 🛍️</div>
+<div class="icons">
+<span>♙</span>
+<span>♡</span>
+<span>🛍</span>
+</div>
+
+</div>
+
+
+<div class="nav">
+
+<a href="#new">New Arrivals</a>
+<a href="#earrings">Earrings</a>
+<a href="#necklaces">Necklaces</a>
+<a href="#rings">Rings</a>
+<a href="#bangles">Bangles</a>
+<a href="#gifting">Gifting</a>
+<a href="#festive">Festive Edit</a>
+<a class="sale" href="#new">Sale</a>
+
+</div>
 
 </header>
 
 
-<div class="hero" id="home">
+<!-- HERO -->
+
+<div class="hero">
 
 <div class="hero-content">
 
-<div class="small">TIMELESS • INDIAN • BEAUTIFUL</div>
+<div class="hero-small">
+NEW FESTIVE COLLECTION
+</div>
 
-<h1>
-Jewellery that<br>
-<span>celebrates you.</span>
-</h1>
+<h2>
+Jewellery made<br>
+for <span>your story.</span>
+</h2>
 
 <p>
-Discover jewellery inspired by Indian elegance and the beauty
-of traditional shringar. Designed for everyday moments,
-celebrations and everything in between.
+Discover Indian-inspired jewellery designed to make
+everyday moments and unforgettable celebrations
+feel a little more beautiful.
 </p>
 
-<a href="#shop" class="button">
-EXPLORE COLLECTION →
+<a href="#new" class="button">
+SHOP NEW ARRIVALS →
 </a>
 
 </div>
+
 </div>
 
 
-<section id="collections">
+<!-- BENEFITS -->
 
-<div class="heading">
-<p>SHOP BY CATEGORY</p>
-<h2>Find Your Shringar</h2>
+<div class="benefits">
+
+<div class="benefit">
+<strong>✦ Premium Finish</strong>
+<span>Made to shine beautifully</span>
 </div>
 
-<div class="categories">
+<div class="benefit">
+<strong>♡ Made With Love</strong>
+<span>Thoughtfully selected designs</span>
+</div>
 
-<div class="category">
-<div class="icon">✨</div>
+<div class="benefit">
+<strong>♢ Easy Returns</strong>
+<span>Simple & convenient shopping</span>
+</div>
+
+<div class="benefit">
+<strong>🎁 Gift Ready</strong>
+<span>Perfect for every celebration</span>
+</div>
+
+</div>
+
+
+<!-- CATEGORIES -->
+
+<section>
+
+<div class="section-heading">
+<span>FIND YOUR FAVOURITE</span>
+<h2>Shop by Category</h2>
+</div>
+
+
+<div class="category-grid">
+
+<a class="category" id="earrings">
+<div class="category-image">
+<img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=600&q=80">
+</div>
 <h3>Earrings</h3>
-<p>From subtle to statement</p>
-</div>
+<p>Jhumkas • Studs • Drops</p>
+</a>
 
-<div class="category">
-<div class="icon">💎</div>
+
+<a class="category" id="necklaces">
+<div class="category-image">
+<img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=600&q=80">
+</div>
 <h3>Necklaces</h3>
-<p>Made to be remembered</p>
-</div>
+<p>Chokers • Pendants</p>
+</a>
 
-<div class="category">
-<div class="icon">💍</div>
+
+<a class="category" id="rings">
+<div class="category-image">
+<img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=600&q=80">
+</div>
 <h3>Rings</h3>
-<p>Little details, big charm</p>
+<p>Everyday • Statement</p>
+</a>
+
+
+<a class="category" id="bangles">
+<div class="category-image">
+<img src="https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?auto=format&fit=crop&w=600&q=80">
+</div>
+<h3>Bracelets</h3>
+<p>Bangles • Kadas</p>
+</a>
+
+
+<a class="category">
+<div class="category-image">
+<img src="https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&w=600&q=80">
+</div>
+<h3>Daily Wear</h3>
+<p>Minimal • Elegant</p>
+</a>
+
+
+<a class="category">
+<div class="category-image">
+<img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=600&q=80">
+</div>
+<h3>Jewellery Sets</h3>
+<p>Complete Your Look</p>
+</a>
+
 </div>
 
-<div class="category">
-<div class="icon">⭕</div>
-<h3>Bangles</h3>
-<p>Traditional with a modern touch</p>
-</div>
-
-</div>
 </section>
 
 
-<section class="products" id="shop">
+<!-- BESTSELLERS -->
 
-<div class="heading">
-<p>OUR FAVOURITES</p>
-<h2>Trending at SHRIGEHNA</h2>
+<section class="products-section" id="new">
+
+<div class="section-heading">
+<span>MOST LOVED</span>
+<h2>Our Bestsellers</h2>
 </div>
+
 
 <div class="product-grid">
 
+
 <div class="product">
-<div class="product-image">✨</div>
+
+<div class="badge">BESTSELLER</div>
+<div class="wishlist">♡</div>
+
+<div class="product-photo">
+<img src="https://images.unsplash.com/photo-1635767798638-3e25273a8236?auto=format&fit=crop&w=700&q=85">
+</div>
+
 <div class="product-info">
-<h3>Meera Jhumka</h3>
-<p>Traditional Earrings</p>
-<div class="price">₹1,499</div>
+<h3>Meher Gold Earrings</h3>
+<div class="product-type">STATEMENT EARRINGS</div>
+
+<div class="price">
+₹1,499
+<span class="mrp">₹1,899</span>
+<span class="discount">21% OFF</span>
+</div>
+
+<button class="add" onclick="addBag(this)">
+ADD TO BAG
+</button>
+
 </div>
 </div>
 
+
 <div class="product">
-<div class="product-image">💎</div>
+
+<div class="badge">NEW</div>
+<div class="wishlist">♡</div>
+
+<div class="product-photo">
+<img src="https://images.unsplash.com/photo-1599643477877-530eb83abc8e?auto=format&fit=crop&w=700&q=85">
+</div>
+
 <div class="product-info">
 <h3>Riwaaz Necklace</h3>
-<p>Festive Collection</p>
-<div class="price">₹2,999</div>
+<div class="product-type">FESTIVE COLLECTION</div>
+
+<div class="price">
+₹2,499
+<span class="mrp">₹2,999</span>
+<span class="discount">17% OFF</span>
+</div>
+
+<button class="add" onclick="addBag(this)">
+ADD TO BAG
+</button>
+
 </div>
 </div>
+
 
 <div class="product">
-<div class="product-image">💍</div>
+
+<div class="wishlist">♡</div>
+
+<div class="product-photo">
+<img src="https://images.unsplash.com/photo-1603561596112-db1d31437b8a?auto=format&fit=crop&w=700&q=85">
+</div>
+
 <div class="product-info">
-<h3>Gauri Ring</h3>
-<p>Everyday Collection</p>
-<div class="price">₹999</div>
+<h3>Gauri Statement Ring</h3>
+<div class="product-type">EVERYDAY COLLECTION</div>
+
+<div class="price">
+₹999
+<span class="mrp">₹1,299</span>
+<span class="discount">23% OFF</span>
+</div>
+
+<button class="add" onclick="addBag(this)">
+ADD TO BAG
+</button>
+
 </div>
 </div>
+
 
 <div class="product">
-<div class="product-image">⭕</div>
+
+<div class="badge">TRENDING</div>
+<div class="wishlist">♡</div>
+
+<div class="product-photo">
+<img src="https://images.unsplash.com/photo-1619119069152-a2b331eb392a?auto=format&fit=crop&w=700&q=85">
+</div>
+
 <div class="product-info">
-<h3>Suhani Bangles</h3>
-<p>Traditional Collection</p>
-<div class="price">₹1,799</div>
+<h3>Suhani Bracelet</h3>
+<div class="product-type">TIMELESS COLLECTION</div>
+
+<div class="price">
+₹1,299
+<span class="mrp">₹1,699</span>
+<span class="discount">24% OFF</span>
+</div>
+
+<button class="add" onclick="addBag(this)">
+ADD TO BAG
+</button>
+
 </div>
 </div>
 
+
+</div>
+
+
+<div class="view-all">
+<a href="#">VIEW ALL JEWELLERY →</a>
 </div>
 
 </section>
 
 
-<section class="story" id="about">
+<!-- FESTIVE BANNER -->
 
-<h2>Our Story</h2>
+<section class="collection" id="festive">
 
-<p>
-SHRIGEHNA is inspired by the timeless beauty of Indian shringar.
-We believe jewellery is more than an accessory — it is an
-expression of confidence, celebration and individuality.
-Our collections bring together traditional inspiration
-with modern everyday elegance.
-</p>
+<div class="collection-image"></div>
 
-</section>
+<div class="collection-content">
 
+<span>THE FESTIVE EDIT</span>
 
-<section class="contact" id="contact">
-
-<h2>Stay Connected</h2>
+<h2>
+Made for<br>
+celebrations.
+</h2>
 
 <p>
-New collections, festive edits and beautiful jewellery are coming soon.
+From intimate festivities to unforgettable weddings,
+discover jewellery inspired by Indian celebrations,
+tradition and timeless beauty.
 </p>
 
-<a class="button" href="#">
-WHATSAPP US
+<a href="#new" class="light-button">
+EXPLORE THE EDIT →
 </a>
 
+</div>
+
 </section>
 
+
+<!-- SHOP FOR -->
+
+<section id="gifting">
+
+<div class="section-heading">
+<span>SOMETHING FOR EVERY MOMENT</span>
+<h2>Find Your Perfect Piece</h2>
+</div>
+
+
+<div class="shop-for-grid">
+
+
+<div class="shop-for">
+
+<img src="https://images.unsplash.com/photo-1611085583191-a3b181a88401?auto=format&fit=crop&w=900&q=85">
+
+<div class="shop-for-text">
+<h3>Everyday Jewellery</h3>
+<a href="#new">SHOP NOW →</a>
+</div>
+
+</div>
+
+
+<div class="shop-for">
+
+<img src="https://images.unsplash.com/photo-1601121141461-9d6647bca1ed?auto=format&fit=crop&w=900&q=85">
+
+<div class="shop-for-text">
+<h3>Festive Favourites</h3>
+<a href="#festive">EXPLORE →</a>
+</div>
+
+</div>
+
+
+<div class="shop-for">
+
+<img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=900&q=85">
+
+<div class="shop-for-text">
+<h3>Gifts She'll Love</h3>
+<a href="#new">SHOP GIFTS →</a>
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- BRAND STORY -->
+
+<section class="brand-story">
+
+<div class="brand-picture">
+
+<div class="brand-mark">
+
+<div class="hindi">
+श्री गहना
+</div>
+
+<strong>
+SHRIGEHNA
+</strong>
+
+</div>
+
+</div>
+
+
+<div class="brand-copy">
+
+<span>OUR STORY</span>
+
+<h2>
+Jewellery is more<br>
+than an accessory.
+</h2>
+
+<p>
+SHRIGEHNA is inspired by the timeless beauty of Indian
+shringar and the idea that jewellery is part of our stories,
+celebrations and everyday moments.
+</p>
+
+<p>
+We bring traditional inspiration together with a modern
+sensibility to create jewellery for every version of you.
+</p>
+
+<a href="#" class="button">
+DISCOVER OUR STORY →
+</a>
+
+</div>
+
+</section>
+
+
+<!-- REVIEWS -->
+
+<section class="reviews">
+
+<div class="section-heading">
+<span>SHRIGEHNA LOVE</span>
+<h2>Loved by You</h2>
+</div>
+
+
+<div class="review-grid">
+
+<div class="review">
+
+<div class="stars">★★★★★</div>
+
+<p>
+“Beautiful design and such an elegant finish.
+It looks even prettier when worn.”
+</p>
+
+<strong>PRIYA S.</strong>
+
+</div>
+
+
+<div class="review">
+
+<div class="stars">★★★★★</div>
+
+<p>
+“Exactly the kind of jewellery I love —
+modern but still beautifully Indian.”
+</p>
+
+<strong>ANANYA K.</strong>
+
+</div>
+
+
+<div class="review">
+
+<div class="stars">★★★★★</div>
+
+<p>
+“The jewellery and packaging are beautiful.
+Perfect for gifting too.”
+</p>
+
+<strong>RIYA M.</strong>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- INSTAGRAM -->
+
+<section class="instagram">
+
+<div class="section-heading">
+<span>FOLLOW OUR WORLD</span>
+<h2>@shrigehna</h2>
+</div>
+
+
+<div class="instagram-grid">
+
+<div>
+<img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=500&q=80">
+</div>
+
+<div>
+<img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=500&q=80">
+</div>
+
+<div>
+<img src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=500&q=80">
+</div>
+
+<div>
+<img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=500&q=80">
+</div>
+
+<div>
+<img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=500&q=80">
+</div>
+
+</div>
+
+</section>
+
+
+<!-- NEWSLETTER -->
+
+<div class="newsletter">
+
+<h2>Join the SHRIGEHNA family</h2>
+
+<p>
+New collections, festive edits and special offers — straight to your inbox.
+</p>
+
+<form onsubmit="subscribe(event)">
+
+<input
+type="email"
+placeholder="Enter your email address"
+required>
+
+<button>
+JOIN →
+</button>
+
+</form>
+
+<div id="subscribe-message"></div>
+
+</div>
+
+
+<!-- FOOTER -->
 
 <footer>
 
-<h2>SHRIGEHNA</h2>
+<div class="footer-grid">
 
-<p>श्री गहना</p>
+
+<div class="footer-logo">
+
+<div class="hindi">
+श्री गहना
+</div>
+
+<h2>
+SHRIGEHNA
+</h2>
+
+<br>
 
 <p>
-Jewellery for every version of you.
+Indian-inspired jewellery for every story,
+every celebration and every version of you.
 </p>
 
-<p style="margin-top:25px;">
-© 2026 SHRIGEHNA • Demo Website
+</div>
+
+
+<div>
+
+<h4>SHOP</h4>
+
+<a href="#earrings">Earrings</a>
+<a href="#necklaces">Necklaces</a>
+<a href="#rings">Rings</a>
+<a href="#bangles">Bangles</a>
+<a href="#new">New Arrivals</a>
+
+</div>
+
+
+<div>
+
+<h4>HELP</h4>
+
+<a href="#">Contact Us</a>
+<a href="#">Shipping</a>
+<a href="#">Returns</a>
+<a href="#">Jewellery Care</a>
+<a href="#">FAQs</a>
+
+</div>
+
+
+<div>
+
+<h4>FOLLOW US</h4>
+
+<a href="#">Instagram</a>
+<a href="#">Facebook</a>
+<a href="#">Pinterest</a>
+
+<br>
+
+<p>
+Need help?<br>
+Chat with us on WhatsApp.
 </p>
+
+</div>
+
+
+</div>
+
+
+<div class="copyright">
+© 2026 SHRIGEHNA • DEMO WEBSITE • ALL RIGHTS RESERVED
+</div>
 
 </footer>
+
+
+<a class="whatsapp" href="#" title="Chat on WhatsApp">
+✆
+</a>
+
+
+<script>
+
+function addBag(button){
+
+button.innerText="ADDED ✓";
+button.style.background="#6b2335";
+button.style.color="white";
+
+setTimeout(function(){
+button.innerText="ADD TO BAG";
+button.style.background="white";
+button.style.color="#6b2335";
+},1800);
+
+}
+
+
+function subscribe(event){
+
+event.preventDefault();
+
+document.getElementById("subscribe-message").innerHTML =
+"<p style='margin-top:15px;color:#e3c6ad;font-size:11px;'>Welcome to the SHRIGEHNA family ✦</p>";
+
+event.target.reset();
+
+}
+
+
+/* Wishlist demo */
+
+document.querySelectorAll(".wishlist").forEach(function(heart){
+
+heart.addEventListener("click",function(){
+
+if(this.innerHTML==="♡"){
+this.innerHTML="♥";
+this.style.color="#6b2335";
+}
+else{
+this.innerHTML="♡";
+this.style.color="#272322";
+}
+
+});
+
+});
+
+</script>
+
 
 </body>
 </html>
