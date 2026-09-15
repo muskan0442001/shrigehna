@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SHRIGEHNA | श्री गहना</title>
+
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#fffaf7;
+    color:#402c27;
+}
+
+.topbar{
+    background:#5b2730;
+    color:white;
+    text-align:center;
+    padding:10px;
+    font-size:13px;
+}
+
+header{
+    background:white;
+    padding:20px 7%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:1px solid #eee;
+}
+
+.logo{
+    text-align:center;
+}
+
+.logo h2{
+    font-family:Georgia, serif;
+    letter-spacing:4px;
+    font-size:26px;
+}
+
+.logo p{
+    font-size:13px;
+    margin-top:3px;
+    color:#8c675b;
+}
+
+nav a{
+    margin:0 14px;
+    text-decoration:none;
+    color:#402c27;
+    font-size:14px;
+}
+
+.hero{
+    min-height:560px;
+    display:flex;
+    align-items:center;
+    padding:70px 8%;
+    background:linear-gradient(120deg,#f8e8df,#ead1c4);
+}
+
+.hero-content{
+    max-width:600px;
+}
+
+.small{
+    letter-spacing:3px;
+    font-size:12px;
+    color:#925d50;
+    margin-bottom:18px;
+}
+
+.hero h1{
+    font-family:Georgia,serif;
+    font-size:64px;
+    font-weight:normal;
+    line-height:1.05;
+}
+
+.hero h1 span{
+    color:#8b4850;
+}
+
+.hero p{
+    margin:25px 0;
+    line-height:1.8;
+    max-width:500px;
+    color:#68524b;
+}
+
+.button{
+    display:inline-block;
+    background:#5b2730;
+    color:white;
+    text-decoration:none;
+    padding:15px 28px;
+    font-size:13px;
+}
+
+section{
+    padding:75px 7%;
+}
+
+.heading{
+    text-align:center;
+    margin-bottom:45px;
+}
+
+.heading p{
+    color:#9a6759;
+    letter-spacing:2px;
+    font-size:11px;
+}
+
+.heading h2{
+    font-family:Georgia,serif;
+    font-size:42px;
+    margin-top:10px;
+}
+
+.categories{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.category{
+    background:#f3e3da;
+    min-height:220px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.category .icon{
+    font-size:55px;
+    margin-bottom:20px;
+}
+
+.category h3{
+    font-family:Georgia,serif;
+    font-size:24px;
+}
+
+.category p{
+    margin-top:8px;
+    font-size:12px;
+    color:#7a625a;
+}
+
+.products{
+    background:white;
+}
+
+.product-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.product{
+    background:#fffaf7;
+    padding-bottom:20px;
+}
+
+.product-image{
+    height:280px;
+    background:linear-gradient(145deg,#ead1c4,#f7e9df);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:75px;
+}
+
+.product-info{
+    padding:18px 10px;
+}
+
+.product h3{
+    font-family:Georgia,serif;
+    font-size:20px;
+}
+
+.product p{
+    color:#8a7167;
+    font-size:12px;
+    margin:6px 0;
+}
+
+.price{
+    font-weight:bold;
+    margin-top:10px;
+}
+
+.story{
+    background:#5b2730;
+    color:white;
+    text-align:center;
+}
+
+.story h2{
+    font-family:Georgia,serif;
+    font-size:45px;
+    margin-bottom:20px;
+}
+
+.story p{
+    max-width:700px;
+    margin:auto;
+    line-height:1.8;
+    color:#f2deda;
+}
+
+.contact{
+    text-align:center;
+}
+
+.contact h2{
+    font-family:Georgia,serif;
+    font-size:40px;
+}
+
+.contact p{
+    margin:15px 0 25px;
+    color:#76615a;
+}
+
+footer{
+    background:#2e1b1e;
+    color:#ddd;
+    padding:40px 7%;
+    text-align:center;
+}
+
+footer h2{
+    font-family:Georgia,serif;
+    letter-spacing:4px;
+    color:white;
+}
+
+footer p{
+    margin-top:10px;
+    font-size:12px;
+}
+
+@media(max-width:800px){
+
+    nav{
+        display:none;
+    }
+
+    .hero h1{
+        font-size:45px;
+    }
+
+    .categories,
+    .product-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="topbar">
+✨ Welcome to SHRIGEHNA — Jewellery for every beautiful moment ✨
+</div>
+
+<header>
+
+<div class="logo">
+<h2>SHRIGEHNA</h2>
+<p>श्री गहना</p>
+</div>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#collections">Collections</a>
+<a href="#shop">Shop</a>
+<a href="#about">Our Story</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<div>♡ &nbsp; 🛍️</div>
+
+</header>
+
+
+<div class="hero" id="home">
+
+<div class="hero-content">
+
+<div class="small">TIMELESS • INDIAN • BEAUTIFUL</div>
+
+<h1>
+Jewellery that<br>
+<span>celebrates you.</span>
+</h1>
+
+<p>
+Discover jewellery inspired by Indian elegance and the beauty
+of traditional shringar. Designed for everyday moments,
+celebrations and everything in between.
+</p>
+
+<a href="#shop" class="button">
+EXPLORE COLLECTION →
+</a>
+
+</div>
+</div>
+
+
+<section id="collections">
+
+<div class="heading">
+<p>SHOP BY CATEGORY</p>
+<h2>Find Your Shringar</h2>
+</div>
+
+<div class="categories">
+
+<div class="category">
+<div class="icon">✨</div>
+<h3>Earrings</h3>
+<p>From subtle to statement</p>
+</div>
+
+<div class="category">
+<div class="icon">💎</div>
+<h3>Necklaces</h3>
+<p>Made to be remembered</p>
+</div>
+
+<div class="category">
+<div class="icon">💍</div>
+<h3>Rings</h3>
+<p>Little details, big charm</p>
+</div>
+
+<div class="category">
+<div class="icon">⭕</div>
+<h3>Bangles</h3>
+<p>Traditional with a modern touch</p>
+</div>
+
+</div>
+</section>
+
+
+<section class="products" id="shop">
+
+<div class="heading">
+<p>OUR FAVOURITES</p>
+<h2>Trending at SHRIGEHNA</h2>
+</div>
+
+<div class="product-grid">
+
+<div class="product">
+<div class="product-image">✨</div>
+<div class="product-info">
+<h3>Meera Jhumka</h3>
+<p>Traditional Earrings</p>
+<div class="price">₹1,499</div>
+</div>
+</div>
+
+<div class="product">
+<div class="product-image">💎</div>
+<div class="product-info">
+<h3>Riwaaz Necklace</h3>
+<p>Festive Collection</p>
+<div class="price">₹2,999</div>
+</div>
+</div>
+
+<div class="product">
+<div class="product-image">💍</div>
+<div class="product-info">
+<h3>Gauri Ring</h3>
+<p>Everyday Collection</p>
+<div class="price">₹999</div>
+</div>
+</div>
+
+<div class="product">
+<div class="product-image">⭕</div>
+<div class="product-info">
+<h3>Suhani Bangles</h3>
+<p>Traditional Collection</p>
+<div class="price">₹1,799</div>
+</div>
+</div>
+
+</div>
+
+</section>
+
+
+<section class="story" id="about">
+
+<h2>Our Story</h2>
+
+<p>
+SHRIGEHNA is inspired by the timeless beauty of Indian shringar.
+We believe jewellery is more than an accessory — it is an
+expression of confidence, celebration and individuality.
+Our collections bring together traditional inspiration
+with modern everyday elegance.
+</p>
+
+</section>
+
+
+<section class="contact" id="contact">
+
+<h2>Stay Connected</h2>
+
+<p>
+New collections, festive edits and beautiful jewellery are coming soon.
+</p>
+
+<a class="button" href="#">
+WHATSAPP US
+</a>
+
+</section>
+
+
+<footer>
+
+<h2>SHRIGEHNA</h2>
+
+<p>श्री गहना</p>
+
+<p>
+Jewellery for every version of you.
+</p>
+
+<p style="margin-top:25px;">
+© 2026 SHRIGEHNA • Demo Website
+</p>
+
+</footer>
+
+</body>
+</html>
