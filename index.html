@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>SHRIGEHNA | Jewellery for Every Story</title>
+<title>SHRIGEHNA | श्री गहना</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,13 +14,13 @@
 
 :root{
 --wine:#6b2335;
---wine-dark:#481522;
+--wine-dark:#451722;
 --cream:#faf7f2;
---beige:#f2e8df;
+--soft:#f3e9e0;
 --gold:#b58a59;
---text:#272322;
+--text:#292424;
 --grey:#777;
---border:#e9e5e1;
+--border:#e9e3de;
 }
 
 *{
@@ -29,14 +29,12 @@ margin:0;
 padding:0;
 }
 
-html{
-scroll-behavior:smooth;
-}
+html{scroll-behavior:smooth}
 
 body{
 font-family:"DM Sans",sans-serif;
 color:var(--text);
-background:#fff;
+background:white;
 }
 
 a{
@@ -49,17 +47,15 @@ width:100%;
 display:block;
 }
 
-/* ANNOUNCEMENT */
+/* TOP BAR */
 
-.announcement{
+.topbar{
 background:var(--wine);
 color:white;
-height:35px;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:11px;
-letter-spacing:.5px;
+text-align:center;
+padding:10px;
+font-size:10px;
+letter-spacing:1px;
 }
 
 /* HEADER */
@@ -73,20 +69,21 @@ border-bottom:1px solid var(--border);
 }
 
 .header-main{
-height:80px;
+height:78px;
 padding:0 5%;
 display:grid;
 grid-template-columns:1fr auto 1fr;
 align-items:center;
 }
 
-.search{
-font-size:13px;
+.search-btn{
+font-size:12px;
+cursor:pointer;
 color:#555;
 }
 
-.search span{
-font-size:18px;
+.search-btn span{
+font-size:20px;
 margin-right:7px;
 }
 
@@ -98,76 +95,95 @@ text-align:center;
 font-family:"Noto Serif Devanagari",serif;
 font-size:17px;
 color:var(--wine);
-line-height:1;
 }
 
 .logo h1{
 font-family:"Playfair Display",serif;
 font-size:25px;
 letter-spacing:5px;
-font-weight:600;
 }
 
-.icons{
+.header-icons{
 display:flex;
 justify-content:flex-end;
+align-items:center;
 gap:20px;
 font-size:19px;
 }
 
-.nav{
+.bag{
+position:relative;
+cursor:pointer;
+}
+
+.bag-count{
+position:absolute;
+top:-10px;
+right:-11px;
+background:var(--wine);
+color:white;
+width:17px;
+height:17px;
+border-radius:50%;
+display:grid;
+place-items:center;
+font-size:8px;
+}
+
+nav{
 height:45px;
 display:flex;
-align-items:center;
 justify-content:center;
-gap:38px;
-border-top:1px solid #f4f1ee;
-font-size:12px;
+align-items:center;
+gap:35px;
+border-top:1px solid #f4f1ef;
+font-size:11px;
+white-space:nowrap;
 }
 
-.nav a{
-transition:.2s;
+nav a{
+cursor:pointer;
 }
 
-.nav a:hover{
+nav a:hover{
 color:var(--wine);
 }
 
 .sale{
-color:#b0273d;
+color:#b52e45;
 }
 
 /* HERO */
 
 .hero{
-height:620px;
+min-height:600px;
 background:
-linear-gradient(90deg,rgba(246,235,224,.97) 0%,rgba(246,235,224,.82) 45%,rgba(246,235,224,.15) 70%),
-url("https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=1800&q=85");
+linear-gradient(90deg,rgba(249,240,232,.96) 0%,rgba(249,240,232,.80) 42%,rgba(249,240,232,.05) 70%),
+url("https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=1800&q=90");
 background-size:cover;
 background-position:center;
 display:flex;
 align-items:center;
-padding:0 8%;
+padding:70px 8%;
 }
 
 .hero-content{
-max-width:540px;
+max-width:550px;
 }
 
-.hero-small{
-font-size:11px;
+.eyebrow{
+font-size:10px;
 letter-spacing:3px;
-color:var(--wine);
 font-weight:600;
-margin-bottom:18px;
+color:var(--wine);
+margin-bottom:17px;
 }
 
 .hero h2{
 font-family:"Playfair Display",serif;
 font-size:62px;
-line-height:1.08;
 font-weight:500;
+line-height:1.07;
 }
 
 .hero h2 span{
@@ -175,25 +191,25 @@ color:var(--wine);
 }
 
 .hero p{
-font-size:14px;
-line-height:1.8;
-color:#625954;
-margin:22px 0 30px;
-max-width:470px;
+font-size:13px;
+line-height:1.9;
+color:#625955;
+max-width:480px;
+margin:22px 0 29px;
 }
 
-.button{
+.btn{
 display:inline-block;
 background:var(--wine);
 color:white;
-padding:15px 28px;
-font-size:11px;
+padding:15px 27px;
+font-size:10px;
 letter-spacing:1px;
 border:1px solid var(--wine);
-transition:.3s;
+cursor:pointer;
 }
 
-.button:hover{
+.btn:hover{
 background:white;
 color:var(--wine);
 }
@@ -207,53 +223,52 @@ border-bottom:1px solid var(--border);
 }
 
 .benefit{
-padding:20px;
 text-align:center;
-font-size:11px;
+padding:20px;
 border-right:1px solid var(--border);
 }
 
 .benefit strong{
 display:block;
-font-size:12px;
+font-size:11px;
 margin-bottom:4px;
 }
 
 .benefit span{
+font-size:9px;
 color:#888;
-font-size:10px;
 }
 
-/* GENERAL */
+/* SECTIONS */
 
 section{
 padding:75px 5%;
 }
 
-.section-heading{
+.heading{
 text-align:center;
 margin-bottom:42px;
 }
 
-.section-heading span{
-font-size:10px;
-letter-spacing:2px;
+.heading span{
+font-size:9px;
+letter-spacing:2.5px;
 color:var(--wine);
 }
 
-.section-heading h2{
+.heading h2{
 font-family:"Playfair Display",serif;
-font-size:38px;
+font-size:39px;
 font-weight:500;
-margin-top:7px;
+margin-top:8px;
 }
 
-/* CATEGORIES */
+/* CATEGORY */
 
-.category-grid{
+.categories{
 display:grid;
 grid-template-columns:repeat(6,1fr);
-gap:25px;
+gap:22px;
 }
 
 .category{
@@ -261,15 +276,15 @@ text-align:center;
 cursor:pointer;
 }
 
-.category-image{
+.category-img{
 aspect-ratio:1/1;
 border-radius:50%;
 overflow:hidden;
-background:#eee5dd;
-margin-bottom:15px;
+background:var(--soft);
+margin-bottom:14px;
 }
 
-.category-image img{
+.category-img img{
 height:100%;
 object-fit:cover;
 transition:.4s;
@@ -280,12 +295,12 @@ transform:scale(1.06);
 }
 
 .category h3{
-font-size:13px;
+font-size:12px;
 font-weight:500;
 }
 
 .category p{
-font-size:10px;
+font-size:9px;
 color:#888;
 margin-top:4px;
 }
@@ -305,287 +320,185 @@ gap:18px;
 .product{
 background:white;
 position:relative;
-overflow:hidden;
 }
 
-.product-photo{
-height:360px;
+.product-image{
+height:330px;
 overflow:hidden;
-background:#f2ede8;
+background:#eee;
 }
 
-.product-photo img{
+.product-image img{
 height:100%;
 object-fit:cover;
 transition:.4s;
 }
 
-.product:hover .product-photo img{
+.product:hover img{
 transform:scale(1.035);
 }
 
-.badge{
+.product-badge{
 position:absolute;
-top:12px;
-left:12px;
+left:11px;
+top:11px;
 background:var(--wine);
 color:white;
-font-size:9px;
+font-size:8px;
 padding:6px 9px;
-z-index:3;
+z-index:2;
 }
 
 .wishlist{
 position:absolute;
-right:13px;
-top:12px;
+right:12px;
+top:11px;
+background:white;
 width:35px;
 height:35px;
-background:white;
 border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:19px;
-z-index:3;
+display:grid;
+place-items:center;
+font-size:18px;
 cursor:pointer;
+z-index:3;
 }
 
 .product-info{
-padding:17px;
+padding:16px;
 }
 
 .product-info h3{
-font-size:14px;
+font-size:13px;
 font-weight:500;
-margin-bottom:6px;
 }
 
-.product-type{
-font-size:10px;
+.type{
+font-size:9px;
 color:#888;
-margin-bottom:10px;
+margin:6px 0 10px;
 }
 
 .price{
-font-size:13px;
+font-size:12px;
 font-weight:600;
 }
 
-.mrp{
+.old{
+text-decoration:line-through;
 color:#999;
 font-weight:400;
-text-decoration:line-through;
-margin-left:7px;
-}
-
-.discount{
-color:#a32c43;
-font-size:10px;
 margin-left:6px;
 }
 
-.add{
-width:100%;
-margin-top:15px;
-padding:12px;
-background:white;
-border:1px solid var(--wine);
-color:var(--wine);
-font-size:10px;
-letter-spacing:1px;
-cursor:pointer;
-transition:.2s;
+.off{
+font-size:9px;
+color:#a92d43;
+margin-left:5px;
 }
 
-.add:hover{
+.add-btn{
+width:100%;
+padding:11px;
+margin-top:14px;
+background:white;
+color:var(--wine);
+border:1px solid var(--wine);
+font-size:9px;
+letter-spacing:1px;
+cursor:pointer;
+}
+
+.add-btn:hover{
 background:var(--wine);
 color:white;
 }
 
-.view-all{
-text-align:center;
-margin-top:40px;
+/* COLLECTION VIEW */
+
+.collection-view{
+display:none;
+background:var(--cream);
+padding:65px 5%;
 }
 
-.view-all a{
+.collection-view.active{
+display:block;
+}
+
+.collection-header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:35px;
+}
+
+.collection-header h2{
+font-family:"Playfair Display";
+font-size:38px;
+font-weight:500;
+}
+
+.close{
 font-size:11px;
-border-bottom:1px solid var(--text);
-padding-bottom:5px;
+cursor:pointer;
+border-bottom:1px solid;
 }
 
-/* COLLECTION BANNER */
+/* FESTIVE */
 
-.collection{
+.festive{
 padding:0;
 display:grid;
 grid-template-columns:1fr 1fr;
-min-height:570px;
+min-height:520px;
 }
 
-.collection-image{
-background:
-url("https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=1200&q=85")
-center/cover;
-min-height:570px;
+.festive-img{
+background:url("https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=1200&q=85") center/cover;
 }
 
-.collection-content{
+.festive-copy{
 background:var(--wine);
 color:white;
-display:flex;
-flex-direction:column;
-justify-content:center;
 padding:9%;
+display:flex;
+justify-content:center;
+flex-direction:column;
 }
 
-.collection-content span{
-font-size:10px;
+.festive-copy span{
+font-size:9px;
 letter-spacing:3px;
-color:#e4c5b2;
+color:#e2c1b1;
 }
 
-.collection-content h2{
-font-family:"Playfair Display",serif;
-font-size:51px;
+.festive-copy h2{
+font-family:"Playfair Display";
+font-size:50px;
 font-weight:500;
-line-height:1.1;
-margin:15px 0 20px;
+margin:14px 0 20px;
 }
 
-.collection-content p{
-font-size:13px;
-line-height:1.8;
-color:#eddde0;
-max-width:500px;
-margin-bottom:27px;
+.festive-copy p{
+font-size:12px;
+line-height:1.9;
+color:#ead9dd;
+margin-bottom:25px;
 }
 
-.light-button{
-display:inline-block;
-width:max-content;
+.white-btn{
 background:white;
 color:var(--wine);
-padding:14px 27px;
-font-size:10px;
-letter-spacing:1px;
-}
-
-/* SHOP FOR */
-
-.shop-for-grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:20px;
-}
-
-.shop-for{
-height:470px;
-position:relative;
-overflow:hidden;
-}
-
-.shop-for img{
-height:100%;
-object-fit:cover;
-transition:.4s;
-}
-
-.shop-for:hover img{
-transform:scale(1.04);
-}
-
-.shop-for-text{
-position:absolute;
-bottom:0;
-left:0;
-right:0;
-padding:70px 25px 25px;
-background:linear-gradient(transparent,rgba(0,0,0,.72));
-color:white;
-}
-
-.shop-for-text h3{
-font-family:"Playfair Display",serif;
-font-size:29px;
-font-weight:500;
-}
-
-.shop-for-text a{
-font-size:10px;
-display:inline-block;
-margin-top:10px;
-border-bottom:1px solid white;
-padding-bottom:3px;
-}
-
-/* BRAND */
-
-.brand-story{
-background:#f4e9e0;
-display:grid;
-grid-template-columns:1fr 1fr;
-align-items:center;
-gap:7%;
-}
-
-.brand-picture{
-height:500px;
-background:#dfc9b7;
-display:flex;
-align-items:center;
-justify-content:center;
-}
-
-.brand-mark{
-width:260px;
-height:310px;
-border:1px solid var(--gold);
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-color:var(--wine);
-}
-
-.brand-mark .hindi{
-font-family:"Noto Serif Devanagari";
-font-size:45px;
-}
-
-.brand-mark strong{
-font-family:"Playfair Display";
-letter-spacing:5px;
-font-size:18px;
-margin-top:12px;
-}
-
-.brand-copy span{
-font-size:10px;
-letter-spacing:2px;
-color:var(--wine);
-}
-
-.brand-copy h2{
-font-family:"Playfair Display";
-font-size:47px;
-font-weight:500;
-line-height:1.1;
-margin:13px 0 20px;
-}
-
-.brand-copy p{
-font-size:13px;
-line-height:1.9;
-color:#71645e;
-max-width:550px;
-margin-bottom:15px;
+padding:14px 24px;
+font-size:9px;
+width:max-content;
 }
 
 /* REVIEWS */
 
 .reviews{
-background:white;
+background:#f5ece5;
 }
 
 .review-grid{
@@ -595,15 +508,14 @@ gap:20px;
 }
 
 .review{
-border:1px solid var(--border);
-padding:32px;
+background:white;
+padding:30px;
 text-align:center;
 }
 
 .stars{
-color:#b68b55;
+color:var(--gold);
 letter-spacing:3px;
-font-size:13px;
 }
 
 .review p{
@@ -614,35 +526,7 @@ margin:17px 0;
 }
 
 .review strong{
-font-size:10px;
-letter-spacing:1px;
-}
-
-/* INSTAGRAM */
-
-.instagram{
-background:var(--cream);
-}
-
-.instagram-grid{
-display:grid;
-grid-template-columns:repeat(5,1fr);
-gap:8px;
-}
-
-.instagram-grid div{
-aspect-ratio:1/1;
-overflow:hidden;
-}
-
-.instagram-grid img{
-height:100%;
-object-fit:cover;
-transition:.4s;
-}
-
-.instagram-grid img:hover{
-transform:scale(1.06);
+font-size:9px;
 }
 
 /* NEWSLETTER */
@@ -651,91 +535,150 @@ transform:scale(1.06);
 background:var(--wine-dark);
 color:white;
 text-align:center;
-padding:60px 20px;
+padding:55px 20px;
 }
 
 .newsletter h2{
 font-family:"Playfair Display";
-font-size:35px;
+font-size:34px;
 font-weight:500;
 }
 
 .newsletter p{
-font-size:11px;
+font-size:10px;
 color:#d9c8cc;
-margin:10px 0 23px;
+margin:10px 0 22px;
 }
 
 .newsletter form{
 max-width:500px;
-margin:auto;
 display:flex;
+margin:auto;
 }
 
 .newsletter input{
 flex:1;
-padding:15px;
-border:none;
-outline:none;
+padding:14px;
+border:0;
+outline:0;
 }
 
 .newsletter button{
-border:none;
+border:0;
 background:var(--gold);
 color:white;
-padding:0 25px;
-font-size:10px;
+padding:0 24px;
 cursor:pointer;
 }
 
 /* FOOTER */
 
 footer{
-background:#241c1e;
+background:#241b1e;
 color:#bbb;
-padding:60px 6% 25px;
+padding:55px 6% 25px;
 }
 
 .footer-grid{
 display:grid;
 grid-template-columns:2fr 1fr 1fr 1fr;
-gap:60px;
+gap:50px;
 }
 
-.footer-logo h2{
+footer h2{
 font-family:"Playfair Display";
 color:white;
 letter-spacing:4px;
 }
 
-.footer-logo .hindi{
+.footer-hindi{
 font-family:"Noto Serif Devanagari";
 color:#d4b393;
 font-size:18px;
-margin-bottom:10px;
 }
 
 footer h4{
+font-size:9px;
 color:white;
-font-size:10px;
 letter-spacing:1px;
-margin-bottom:17px;
+margin-bottom:15px;
 }
 
-footer p,
-footer a{
-display:block;
-font-size:10px;
+footer p,footer a{
+font-size:9px;
 line-height:2.1;
-color:#b8abad;
+display:block;
+color:#b9abad;
 }
 
 .copyright{
 text-align:center;
-border-top:1px solid #423639;
-margin-top:45px;
+border-top:1px solid #44383a;
+margin-top:40px;
 padding-top:20px;
-font-size:9px;
+font-size:8px;
+}
+
+/* SEARCH */
+
+.search-overlay{
+display:none;
+position:fixed;
+inset:0;
+background:rgba(255,255,255,.98);
+z-index:5000;
+padding:70px 7%;
+overflow:auto;
+}
+
+.search-overlay.active{
+display:block;
+}
+
+.search-close{
+position:absolute;
+right:7%;
+top:30px;
+font-size:30px;
+cursor:pointer;
+}
+
+.search-overlay h2{
+font-family:"Playfair Display";
+font-size:36px;
+font-weight:500;
+margin-bottom:25px;
+}
+
+.search-input{
+width:100%;
+padding:15px 3px;
+font-size:20px;
+border:0;
+border-bottom:1px solid #999;
+outline:0;
+}
+
+.search-results{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:15px;
+margin-top:30px;
+}
+
+.search-card{
+background:var(--cream);
+padding:18px;
+}
+
+.search-card h3{
+font-size:12px;
+margin-bottom:7px;
+}
+
+.search-card p{
+font-size:11px;
+color:var(--wine);
 }
 
 /* WHATSAPP */
@@ -744,53 +687,42 @@ font-size:9px;
 position:fixed;
 right:22px;
 bottom:22px;
+background:#25D366;
+color:white;
 width:55px;
 height:55px;
 border-radius:50%;
-background:#25D366;
-color:white;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:24px;
-z-index:1000;
-box-shadow:0 5px 20px #0003;
+display:grid;
+place-items:center;
+font-size:23px;
+z-index:2000;
 }
 
 /* MOBILE */
 
-@media(max-width:900px){
+@media(max-width:850px){
 
-.nav{
-overflow:auto;
+nav{
+overflow-x:auto;
 justify-content:flex-start;
 padding:0 20px;
-gap:25px;
 }
 
-.search{
-font-size:0;
-}
-
-.header-main{
-padding:0 4%;
-}
-
-.category-grid{
+.categories{
 grid-template-columns:repeat(3,1fr);
 }
 
-.product-grid{
+.product-grid,
+.search-results{
 grid-template-columns:repeat(2,1fr);
 }
 
-.collection,
-.brand-story{
+.festive{
 grid-template-columns:1fr;
 }
 
-.shop-for-grid{
-grid-template-columns:1fr 1fr;
+.festive-img{
+min-height:450px;
 }
 
 .review-grid{
@@ -803,10 +735,14 @@ grid-template-columns:1fr 1fr;
 
 }
 
-@media(max-width:600px){
+@media(max-width:550px){
 
-.announcement{
-font-size:9px;
+.search-btn{
+font-size:0;
+}
+
+.header-main{
+padding:0 4%;
 }
 
 .logo h1{
@@ -814,84 +750,44 @@ font-size:18px;
 letter-spacing:3px;
 }
 
-.logo .hindi{
-font-size:14px;
-}
-
-.icons{
-gap:11px;
+.header-icons{
+gap:12px;
 font-size:16px;
 }
 
 .hero{
-height:600px;
-background-position:62% center;
-padding:0 6%;
+min-height:580px;
 align-items:flex-end;
-padding-bottom:65px;
+padding:50px 5%;
 }
 
 .hero-content{
-background:rgba(250,247,242,.90);
-padding:25px;
+background:rgba(250,247,242,.91);
+padding:23px;
 }
 
 .hero h2{
-font-size:42px;
+font-size:40px;
 }
 
 .benefits{
 grid-template-columns:1fr 1fr;
 }
 
-.category-grid{
-grid-template-columns:repeat(3,1fr);
-gap:13px;
+.categories{
+gap:12px;
 }
 
-.category h3{
-font-size:11px;
-}
-
-.product-photo{
-height:270px;
-}
-
-.product-grid{
-gap:8px;
-}
-
-.product-info{
-padding:12px;
-}
-
-.shop-for-grid{
-grid-template-columns:1fr;
-}
-
-.shop-for{
-height:420px;
-}
-
-.instagram-grid{
-grid-template-columns:repeat(3,1fr);
-}
-
-.footer-grid{
-grid-template-columns:1fr 1fr;
-gap:35px;
+.product-image{
+height:250px;
 }
 
 section{
-padding:60px 4%;
+padding:55px 4%;
 }
 
-.section-heading h2{
-font-size:32px;
-}
-
-.collection-content h2{
-font-size:40px;
+.heading h2{
+font-size:31px;
 }
 
 }
@@ -902,8 +798,8 @@ font-size:40px;
 
 <body>
 
-<div class="announcement">
-FREE SHIPPING ABOVE ₹1,499 &nbsp; | &nbsp; EASY RETURNS &nbsp; | &nbsp; FESTIVE EDIT NOW LIVE
+<div class="topbar">
+FREE SHIPPING ABOVE ₹1,499 &nbsp; • &nbsp; EASY RETURNS &nbsp; • &nbsp; FESTIVE EDIT NOW LIVE
 </div>
 
 
@@ -911,7 +807,7 @@ FREE SHIPPING ABOVE ₹1,499 &nbsp; | &nbsp; EASY RETURNS &nbsp; | &nbsp; FESTIV
 
 <div class="header-main">
 
-<div class="search">
+<div class="search-btn" onclick="openSearch()">
 <span>⌕</span> Search jewellery
 </div>
 
@@ -920,27 +816,50 @@ FREE SHIPPING ABOVE ₹1,499 &nbsp; | &nbsp; EASY RETURNS &nbsp; | &nbsp; FESTIV
 <h1>SHRIGEHNA</h1>
 </div>
 
-<div class="icons">
-<span>♙</span>
+<div class="header-icons">
 <span>♡</span>
-<span>🛍</span>
+<span class="bag">🛍
+<span class="bag-count" id="bagCount">0</span>
+</span>
 </div>
 
 </div>
 
+<nav>
 
-<div class="nav">
+<a onclick="showAll()">New Arrivals</a>
 
-<a href="#new">New Arrivals</a>
-<a href="#earrings">Earrings</a>
-<a href="#necklaces">Necklaces</a>
-<a href="#rings">Rings</a>
-<a href="#bangles">Bangles</a>
-<a href="#gifting">Gifting</a>
+<a onclick="openCollection('earrings')">
+Earrings
+</a>
+
+<a onclick="openCollection('necklaces')">
+Necklaces
+</a>
+
+<a onclick="openCollection('rings')">
+Rings
+</a>
+
+<a onclick="openCollection('bangles')">
+Bangles
+</a>
+
+<a onclick="openCollection('daily wear')">
+Daily Wear
+</a>
+
+<a onclick="openCollection('sets')">
+Jewellery Sets
+</a>
+
 <a href="#festive">Festive Edit</a>
-<a class="sale" href="#new">Sale</a>
 
-</div>
+<a class="sale" onclick="showAll()">
+Sale
+</a>
+
+</nav>
 
 </header>
 
@@ -951,7 +870,7 @@ FREE SHIPPING ABOVE ₹1,499 &nbsp; | &nbsp; EASY RETURNS &nbsp; | &nbsp; FESTIV
 
 <div class="hero-content">
 
-<div class="hero-small">
+<div class="eyebrow">
 NEW FESTIVE COLLECTION
 </div>
 
@@ -961,12 +880,12 @@ for <span>your story.</span>
 </h2>
 
 <p>
-Discover Indian-inspired jewellery designed to make
-everyday moments and unforgettable celebrations
-feel a little more beautiful.
+Indian-inspired jewellery created for everyday elegance,
+festive celebrations and all the beautiful moments
+in between.
 </p>
 
-<a href="#new" class="button">
+<a class="btn" onclick="showAll()">
 SHOP NEW ARRIVALS →
 </a>
 
@@ -981,22 +900,22 @@ SHOP NEW ARRIVALS →
 
 <div class="benefit">
 <strong>✦ Premium Finish</strong>
-<span>Made to shine beautifully</span>
+<span>Beautifully crafted pieces</span>
 </div>
 
 <div class="benefit">
 <strong>♡ Made With Love</strong>
-<span>Thoughtfully selected designs</span>
+<span>Thoughtfully selected</span>
 </div>
 
 <div class="benefit">
 <strong>♢ Easy Returns</strong>
-<span>Simple & convenient shopping</span>
+<span>Simple shopping experience</span>
 </div>
 
 <div class="benefit">
 <strong>🎁 Gift Ready</strong>
-<span>Perfect for every celebration</span>
+<span>For every celebration</span>
 </div>
 
 </div>
@@ -1006,209 +925,131 @@ SHOP NEW ARRIVALS →
 
 <section>
 
-<div class="section-heading">
+<div class="heading">
 <span>FIND YOUR FAVOURITE</span>
 <h2>Shop by Category</h2>
 </div>
 
+<div class="categories">
 
-<div class="category-grid">
+<div class="category" onclick="openCollection('earrings')">
 
-<a class="category" id="earrings">
-<div class="category-image">
-<img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=600&q=80">
+<div class="category-img">
+<img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=600&q=85">
 </div>
+
 <h3>Earrings</h3>
 <p>Jhumkas • Studs • Drops</p>
-</a>
 
-
-<a class="category" id="necklaces">
-<div class="category-image">
-<img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=600&q=80">
 </div>
+
+
+<div class="category" onclick="openCollection('necklaces')">
+
+<div class="category-img">
+<img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=600&q=85">
+</div>
+
 <h3>Necklaces</h3>
 <p>Chokers • Pendants</p>
-</a>
 
-
-<a class="category" id="rings">
-<div class="category-image">
-<img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=600&q=80">
 </div>
+
+
+<div class="category" onclick="openCollection('rings')">
+
+<div class="category-img">
+<img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=600&q=85">
+</div>
+
 <h3>Rings</h3>
-<p>Everyday • Statement</p>
-</a>
+<p>Minimal • Statement</p>
 
-
-<a class="category" id="bangles">
-<div class="category-image">
-<img src="https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?auto=format&fit=crop&w=600&q=80">
 </div>
-<h3>Bracelets</h3>
-<p>Bangles • Kadas</p>
-</a>
 
 
-<a class="category">
-<div class="category-image">
-<img src="https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&w=600&q=80">
+<div class="category" onclick="openCollection('bangles')">
+
+<div class="category-img">
+<img src="https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&w=600&q=85">
 </div>
+
+<h3>Bangles</h3>
+<p>Kadas • Bracelets</p>
+
+</div>
+
+
+<div class="category" onclick="openCollection('daily wear')">
+
+<div class="category-img">
+<img src="https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?auto=format&fit=crop&w=600&q=85">
+</div>
+
 <h3>Daily Wear</h3>
-<p>Minimal • Elegant</p>
-</a>
+<p>Simple • Elegant</p>
 
-
-<a class="category">
-<div class="category-image">
-<img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=600&q=80">
 </div>
+
+
+<div class="category" onclick="openCollection('sets')">
+
+<div class="category-img">
+<img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=600&q=85">
+</div>
+
 <h3>Jewellery Sets</h3>
 <p>Complete Your Look</p>
-</a>
+
+</div>
 
 </div>
 
 </section>
 
 
-<!-- BESTSELLERS -->
+<!-- MAIN PRODUCTS -->
 
-<section class="products-section" id="new">
+<section class="products-section" id="products">
 
-<div class="section-heading">
+<div class="heading">
 <span>MOST LOVED</span>
 <h2>Our Bestsellers</h2>
 </div>
 
-
-<div class="product-grid">
-
-
-<div class="product">
-
-<div class="badge">BESTSELLER</div>
-<div class="wishlist">♡</div>
-
-<div class="product-photo">
-<img src="https://images.unsplash.com/photo-1635767798638-3e25273a8236?auto=format&fit=crop&w=700&q=85">
-</div>
-
-<div class="product-info">
-<h3>Meher Gold Earrings</h3>
-<div class="product-type">STATEMENT EARRINGS</div>
-
-<div class="price">
-₹1,499
-<span class="mrp">₹1,899</span>
-<span class="discount">21% OFF</span>
-</div>
-
-<button class="add" onclick="addBag(this)">
-ADD TO BAG
-</button>
-
-</div>
-</div>
-
-
-<div class="product">
-
-<div class="badge">NEW</div>
-<div class="wishlist">♡</div>
-
-<div class="product-photo">
-<img src="https://images.unsplash.com/photo-1599643477877-530eb83abc8e?auto=format&fit=crop&w=700&q=85">
-</div>
-
-<div class="product-info">
-<h3>Riwaaz Necklace</h3>
-<div class="product-type">FESTIVE COLLECTION</div>
-
-<div class="price">
-₹2,499
-<span class="mrp">₹2,999</span>
-<span class="discount">17% OFF</span>
-</div>
-
-<button class="add" onclick="addBag(this)">
-ADD TO BAG
-</button>
-
-</div>
-</div>
-
-
-<div class="product">
-
-<div class="wishlist">♡</div>
-
-<div class="product-photo">
-<img src="https://images.unsplash.com/photo-1603561596112-db1d31437b8a?auto=format&fit=crop&w=700&q=85">
-</div>
-
-<div class="product-info">
-<h3>Gauri Statement Ring</h3>
-<div class="product-type">EVERYDAY COLLECTION</div>
-
-<div class="price">
-₹999
-<span class="mrp">₹1,299</span>
-<span class="discount">23% OFF</span>
-</div>
-
-<button class="add" onclick="addBag(this)">
-ADD TO BAG
-</button>
-
-</div>
-</div>
-
-
-<div class="product">
-
-<div class="badge">TRENDING</div>
-<div class="wishlist">♡</div>
-
-<div class="product-photo">
-<img src="https://images.unsplash.com/photo-1619119069152-a2b331eb392a?auto=format&fit=crop&w=700&q=85">
-</div>
-
-<div class="product-info">
-<h3>Suhani Bracelet</h3>
-<div class="product-type">TIMELESS COLLECTION</div>
-
-<div class="price">
-₹1,299
-<span class="mrp">₹1,699</span>
-<span class="discount">24% OFF</span>
-</div>
-
-<button class="add" onclick="addBag(this)">
-ADD TO BAG
-</button>
-
-</div>
-</div>
-
-
-</div>
-
-
-<div class="view-all">
-<a href="#">VIEW ALL JEWELLERY →</a>
-</div>
+<div class="product-grid" id="mainProductGrid"></div>
 
 </section>
 
 
-<!-- FESTIVE BANNER -->
+<!-- CATEGORY RESULT -->
 
-<section class="collection" id="festive">
+<div class="collection-view" id="collectionView">
 
-<div class="collection-image"></div>
+<div class="collection-header">
 
-<div class="collection-content">
+<h2 id="collectionTitle">
+Collection
+</h2>
+
+<span class="close" onclick="closeCollection()">
+CLOSE ×
+</span>
+
+</div>
+
+<div class="product-grid" id="collectionGrid"></div>
+
+</div>
+
+
+<!-- FESTIVE -->
+
+<section class="festive" id="festive">
+
+<div class="festive-img"></div>
+
+<div class="festive-copy">
 
 <span>THE FESTIVE EDIT</span>
 
@@ -1218,117 +1059,13 @@ celebrations.
 </h2>
 
 <p>
-From intimate festivities to unforgettable weddings,
-discover jewellery inspired by Indian celebrations,
-tradition and timeless beauty.
+Discover jewellery inspired by Indian festivities,
+weddings and the joy of dressing up for moments
+worth remembering.
 </p>
 
-<a href="#new" class="light-button">
-EXPLORE THE EDIT →
-</a>
-
-</div>
-
-</section>
-
-
-<!-- SHOP FOR -->
-
-<section id="gifting">
-
-<div class="section-heading">
-<span>SOMETHING FOR EVERY MOMENT</span>
-<h2>Find Your Perfect Piece</h2>
-</div>
-
-
-<div class="shop-for-grid">
-
-
-<div class="shop-for">
-
-<img src="https://images.unsplash.com/photo-1611085583191-a3b181a88401?auto=format&fit=crop&w=900&q=85">
-
-<div class="shop-for-text">
-<h3>Everyday Jewellery</h3>
-<a href="#new">SHOP NOW →</a>
-</div>
-
-</div>
-
-
-<div class="shop-for">
-
-<img src="https://images.unsplash.com/photo-1601121141461-9d6647bca1ed?auto=format&fit=crop&w=900&q=85">
-
-<div class="shop-for-text">
-<h3>Festive Favourites</h3>
-<a href="#festive">EXPLORE →</a>
-</div>
-
-</div>
-
-
-<div class="shop-for">
-
-<img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=900&q=85">
-
-<div class="shop-for-text">
-<h3>Gifts She'll Love</h3>
-<a href="#new">SHOP GIFTS →</a>
-</div>
-
-</div>
-
-
-</div>
-
-</section>
-
-
-<!-- BRAND STORY -->
-
-<section class="brand-story">
-
-<div class="brand-picture">
-
-<div class="brand-mark">
-
-<div class="hindi">
-श्री गहना
-</div>
-
-<strong>
-SHRIGEHNA
-</strong>
-
-</div>
-
-</div>
-
-
-<div class="brand-copy">
-
-<span>OUR STORY</span>
-
-<h2>
-Jewellery is more<br>
-than an accessory.
-</h2>
-
-<p>
-SHRIGEHNA is inspired by the timeless beauty of Indian
-shringar and the idea that jewellery is part of our stories,
-celebrations and everyday moments.
-</p>
-
-<p>
-We bring traditional inspiration together with a modern
-sensibility to create jewellery for every version of you.
-</p>
-
-<a href="#" class="button">
-DISCOVER OUR STORY →
+<a class="white-btn" onclick="showAll()">
+EXPLORE COLLECTION →
 </a>
 
 </div>
@@ -1340,90 +1077,35 @@ DISCOVER OUR STORY →
 
 <section class="reviews">
 
-<div class="section-heading">
+<div class="heading">
 <span>SHRIGEHNA LOVE</span>
 <h2>Loved by You</h2>
 </div>
 
-
 <div class="review-grid">
 
 <div class="review">
-
 <div class="stars">★★★★★</div>
-
 <p>
-“Beautiful design and such an elegant finish.
-It looks even prettier when worn.”
+“Beautiful jewellery with such an elegant finish.”
 </p>
-
 <strong>PRIYA S.</strong>
-
 </div>
 
-
 <div class="review">
-
 <div class="stars">★★★★★</div>
-
 <p>
-“Exactly the kind of jewellery I love —
-modern but still beautifully Indian.”
+“Modern, graceful and still beautifully Indian.”
 </p>
-
 <strong>ANANYA K.</strong>
-
 </div>
-
 
 <div class="review">
-
 <div class="stars">★★★★★</div>
-
 <p>
-“The jewellery and packaging are beautiful.
-Perfect for gifting too.”
+“Perfect for gifting and festive occasions.”
 </p>
-
 <strong>RIYA M.</strong>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- INSTAGRAM -->
-
-<section class="instagram">
-
-<div class="section-heading">
-<span>FOLLOW OUR WORLD</span>
-<h2>@shrigehna</h2>
-</div>
-
-
-<div class="instagram-grid">
-
-<div>
-<img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=500&q=80">
-</div>
-
-<div>
-<img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=500&q=80">
-</div>
-
-<div>
-<img src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=500&q=80">
-</div>
-
-<div>
-<img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=500&q=80">
-</div>
-
-<div>
-<img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=500&q=80">
 </div>
 
 </div>
@@ -1438,7 +1120,7 @@ Perfect for gifting too.”
 <h2>Join the SHRIGEHNA family</h2>
 
 <p>
-New collections, festive edits and special offers — straight to your inbox.
+Be the first to discover new collections and festive edits.
 </p>
 
 <form onsubmit="subscribe(event)">
@@ -1454,7 +1136,7 @@ JOIN →
 
 </form>
 
-<div id="subscribe-message"></div>
+<div id="newsletterMessage"></div>
 
 </div>
 
@@ -1465,16 +1147,13 @@ JOIN →
 
 <div class="footer-grid">
 
+<div>
 
-<div class="footer-logo">
-
-<div class="hindi">
+<div class="footer-hindi">
 श्री गहना
 </div>
 
-<h2>
-SHRIGEHNA
-</h2>
+<h2>SHRIGEHNA</h2>
 
 <br>
 
@@ -1490,11 +1169,10 @@ every celebration and every version of you.
 
 <h4>SHOP</h4>
 
-<a href="#earrings">Earrings</a>
-<a href="#necklaces">Necklaces</a>
-<a href="#rings">Rings</a>
-<a href="#bangles">Bangles</a>
-<a href="#new">New Arrivals</a>
+<a onclick="openCollection('earrings')">Earrings</a>
+<a onclick="openCollection('necklaces')">Necklaces</a>
+<a onclick="openCollection('rings')">Rings</a>
+<a onclick="openCollection('bangles')">Bangles</a>
 
 </div>
 
@@ -1514,21 +1192,13 @@ every celebration and every version of you.
 
 <div>
 
-<h4>FOLLOW US</h4>
+<h4>FOLLOW</h4>
 
 <a href="#">Instagram</a>
 <a href="#">Facebook</a>
 <a href="#">Pinterest</a>
 
-<br>
-
-<p>
-Need help?<br>
-Chat with us on WhatsApp.
-</p>
-
 </div>
-
 
 </div>
 
@@ -1540,420 +1210,320 @@ Chat with us on WhatsApp.
 </footer>
 
 
-<a class="whatsapp" href="#" title="Chat on WhatsApp">
-✆
-</a>
-
-
-<script>
-
-function addBag(button){
-
-button.innerText="ADDED ✓";
-button.style.background="#6b2335";
-button.style.color="white";
-
-setTimeout(function(){
-button.innerText="ADD TO BAG";
-button.style.background="white";
-button.style.color="#6b2335";
-},1800);
-
-}
-
-
-function subscribe(event){
-
-event.preventDefault();
-
-document.getElementById("subscribe-message").innerHTML =
-"<p style='margin-top:15px;color:#e3c6ad;font-size:11px;'>Welcome to the SHRIGEHNA family ✦</p>";
-
-event.target.reset();
-
-}
-
-
-/* Wishlist demo */
-
-document.querySelectorAll(".wishlist").forEach(function(heart){
-
-heart.addEventListener("click",function(){
-
-if(this.innerHTML==="♡"){
-this.innerHTML="♥";
-this.style.color="#6b2335";
-}
-else{
-this.innerHTML="♡";
-this.style.color="#272322";
-}
-
-});
-
-});
-
-</script>
-
-<!-- SHRIGEHNA FUNCTIONAL UPGRADE -->
-
-<style>
-/* SEARCH OVERLAY */
-.search-overlay{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background:rgba(255,255,255,.98);
-    z-index:9999;
-    display:none;
-    padding:80px 7%;
-}
-
-.search-overlay.active{
-    display:block;
-}
-
-.search-close{
-    position:absolute;
-    right:7%;
-    top:35px;
-    font-size:28px;
-    cursor:pointer;
-}
-
-.search-title{
-    font-family:"Playfair Display",serif;
-    font-size:35px;
-    margin-bottom:25px;
-}
-
-.search-input{
-    width:100%;
-    padding:18px 5px;
-    font-size:22px;
-    border:none;
-    border-bottom:1px solid #aaa;
-    outline:none;
-}
-
-.search-results{
-    margin-top:30px;
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:15px;
-}
-
-.search-item{
-    background:#faf7f2;
-    padding:20px;
-}
-
-.search-item h4{
-    font-size:14px;
-    margin-bottom:7px;
-}
-
-.search-item p{
-    font-size:12px;
-    color:#6b2335;
-}
-
-/* CATEGORY PRODUCTS */
-
-.collection-products{
-    display:none;
-    padding:70px 5%;
-    background:#faf7f2;
-}
-
-.collection-products.active{
-    display:block;
-}
-
-.collection-top{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    margin-bottom:35px;
-}
-
-.collection-top h2{
-    font-family:"Playfair Display",serif;
-    font-size:38px;
-    font-weight:500;
-}
-
-.close-collection{
-    cursor:pointer;
-    font-size:12px;
-    border-bottom:1px solid #333;
-}
-
-.collection-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:18px;
-}
-
-.collection-card{
-    background:white;
-    position:relative;
-}
-
-.collection-card img{
-    width:100%;
-    height:300px;
-    object-fit:cover;
-}
-
-.collection-info{
-    padding:15px;
-}
-
-.collection-info h3{
-    font-size:14px;
-    font-weight:500;
-}
-
-.collection-info p{
-    font-size:12px;
-    margin-top:7px;
-    font-weight:600;
-}
-
-.collection-info button{
-    width:100%;
-    margin-top:13px;
-    padding:11px;
-    background:white;
-    border:1px solid #6b2335;
-    color:#6b2335;
-    cursor:pointer;
-}
-
-.collection-info button:hover{
-    background:#6b2335;
-    color:white;
-}
-
-.cart-badge{
-    position:absolute;
-    background:#6b2335;
-    color:white;
-    font-size:8px;
-    border-radius:50%;
-    min-width:17px;
-    height:17px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    margin-left:10px;
-    margin-top:-8px;
-}
-
-@media(max-width:700px){
-    .collection-grid,
-    .search-results{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .collection-card img{
-        height:220px;
-    }
-}
-</style>
-
-
-<!-- SEARCH WINDOW -->
+<!-- SEARCH -->
 
 <div class="search-overlay" id="searchOverlay">
 
-<div class="search-close" onclick="closeSearch()">×</div>
-
-<div class="search-title">
-What are you looking for?
+<div class="search-close" onclick="closeSearch()">
+×
 </div>
+
+<h2>
+What are you looking for?
+</h2>
 
 <input
 class="search-input"
 id="searchInput"
 type="text"
-placeholder="Search earrings, rings, necklaces..."
-onkeyup="searchProducts()">
+placeholder="Try rings, earrings, necklace..."
+oninput="searchProducts()">
 
 <div class="search-results" id="searchResults"></div>
 
 </div>
 
 
-<!-- CATEGORY COLLECTION -->
-
-<div class="collection-products" id="collectionProducts">
-
-<div class="collection-top">
-
-<h2 id="collectionTitle">
-Collection
-</h2>
-
-<span class="close-collection" onclick="closeCollection()">
-CLOSE ×
-</span>
-
-</div>
-
-<div class="collection-grid" id="collectionGrid"></div>
-
-</div>
+<a class="whatsapp" href="#">
+✆
+</a>
 
 
 <script>
 
-const shrigehnaProducts = [
+/* PRODUCTS */
+
+const products = [
 
 {
 name:"Meher Gold Jhumkas",
 category:"earrings",
 price:"₹1,499",
-image:"https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=600&q=80"
+old:"₹1,899",
+image:"https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=700&q=85"
 },
 
 {
 name:"Aarohi Drop Earrings",
 category:"earrings",
 price:"₹1,199",
-image:"https://images.unsplash.com/photo-1635767798638-3e25273a8236?auto=format&fit=crop&w=600&q=80"
+old:"₹1,499",
+image:"https://images.unsplash.com/photo-1635767798638-3e25273a8236?auto=format&fit=crop&w=700&q=85"
 },
 
 {
-name:"Noor Statement Earrings",
+name:"Noor Festive Earrings",
 category:"earrings",
 price:"₹1,699",
-image:"https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?auto=format&fit=crop&w=600&q=80"
+old:"₹2,099",
+image:"https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?auto=format&fit=crop&w=700&q=85"
 },
-
-{
-name:"Tara Everyday Earrings",
-category:"earrings",
-price:"₹899",
-image:"https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=600&q=80"
-},
-
 
 {
 name:"Riwaaz Necklace",
 category:"necklaces",
 price:"₹2,499",
-image:"https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=600&q=80"
+old:"₹2,999",
+image:"https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=700&q=85"
 },
 
 {
 name:"Meera Pendant",
 category:"necklaces",
 price:"₹1,699",
-image:"https://images.unsplash.com/photo-1599643477877-530eb83abc8e?auto=format&fit=crop&w=600&q=80"
+old:"₹1,999",
+image:"https://images.unsplash.com/photo-1599643477877-530eb83abc8e?auto=format&fit=crop&w=700&q=85"
 },
 
 {
-name:"Saanvi Layered Necklace",
+name:"Saanvi Necklace",
 category:"necklaces",
 price:"₹2,799",
-image:"https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=600&q=80"
+old:"₹3,299",
+image:"https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=700&q=85"
 },
-
-{
-name:"Aisha Gold Necklace",
-category:"necklaces",
-price:"₹2,299",
-image:"https://images.unsplash.com/photo-1601121141461-9d6647bca1ed?auto=format&fit=crop&w=600&q=80"
-},
-
 
 {
 name:"Gauri Statement Ring",
 category:"rings",
 price:"₹999",
-image:"https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=600&q=80"
+old:"₹1,299",
+image:"https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=700&q=85"
 },
 
 {
 name:"Avni Gold Ring",
 category:"rings",
 price:"₹1,199",
-image:"https://images.unsplash.com/photo-1603561596112-db1d31437b8a?auto=format&fit=crop&w=600&q=80"
+old:"₹1,499",
+image:"https://images.unsplash.com/photo-1603561596112-db1d31437b8a?auto=format&fit=crop&w=700&q=85"
 },
 
 {
 name:"Kiara Minimal Ring",
 category:"rings",
 price:"₹799",
-image:"https://images.unsplash.com/photo-1598560917807-1bae44bd2be8?auto=format&fit=crop&w=600&q=80"
+old:"₹999",
+image:"https://images.unsplash.com/photo-1598560917807-1bae44bd2be8?auto=format&fit=crop&w=700&q=85"
 },
-
-{
-name:"Ishita Cocktail Ring",
-category:"rings",
-price:"₹1,399",
-image:"https://images.unsplash.com/photo-1627293509201-cd0c780043e6?auto=format&fit=crop&w=600&q=80"
-},
-
 
 {
 name:"Suhani Kada",
 category:"bangles",
 price:"₹1,799",
-image:"https://images.unsplash.com/photo-1619119069152-a2b331eb392a?auto=format&fit=crop&w=600&q=80"
-},
-
-{
-name:"Rani Gold Bangles",
-category:"bangles",
-price:"₹1,999",
-image:"https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&w=600&q=80"
+old:"₹2,199",
+image:"https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&w=700&q=85"
 },
 
 {
 name:"Aanya Bracelet",
 category:"bangles",
 price:"₹1,299",
-image:"https://images.unsplash.com/photo-1611085583191-a3b181a88401?auto=format&fit=crop&w=600&q=80"
+old:"₹1,599",
+image:"https://images.unsplash.com/photo-1619119069152-a2b331eb392a?auto=format&fit=crop&w=700&q=85"
 },
 
 {
-name:"Naina Everyday Bracelet",
+name:"Naina Bracelet",
 category:"bangles",
 price:"₹1,099",
-image:"https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=600&q=80"
+old:"₹1,399",
+image:"https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=700&q=85"
+},
+
+{
+name:"Tara Everyday Earrings",
+category:"daily wear",
+price:"₹899",
+old:"₹1,099",
+image:"https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=700&q=85"
+},
+
+{
+name:"Mahi Minimal Necklace",
+category:"daily wear",
+price:"₹1,299",
+old:"₹1,599",
+image:"https://images.unsplash.com/photo-1599643477877-530eb83abc8e?auto=format&fit=crop&w=700&q=85"
+},
+
+{
+name:"Aaradhya Jewellery Set",
+category:"sets",
+price:"₹3,499",
+old:"₹4,199",
+image:"https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=700&q=85"
+},
+
+{
+name:"Meher Festive Set",
+category:"sets",
+price:"₹3,999",
+old:"₹4,699",
+image:"https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=700&q=85"
 }
 
 ];
 
 
-let bagCount = 0;
+let bagCount=0;
+
+
+/* PRODUCT HTML */
+
+function productCard(product){
+
+return `
+
+<div class="product">
+
+<div class="wishlist" onclick="toggleWishlist(this)">
+♡
+</div>
+
+<div class="product-image">
+
+<img
+src="${product.image}"
+alt="${product.name}">
+
+</div>
+
+<div class="product-info">
+
+<h3>${product.name}</h3>
+
+<div class="type">
+${product.category.toUpperCase()}
+</div>
+
+<div class="price">
+
+${product.price}
+
+<span class="old">
+${product.old}
+</span>
+
+<span class="off">
+SALE
+</span>
+
+</div>
+
+<button
+class="add-btn"
+onclick="addToBag(this)">
+ADD TO BAG
+</button>
+
+</div>
+
+</div>
+
+`;
+
+}
+
+
+/* MAIN PRODUCTS */
+
+function showMainProducts(){
+
+const grid=
+document.getElementById("mainProductGrid");
+
+grid.innerHTML=
+products.slice(0,8)
+.map(productCard)
+.join("");
+
+}
+
+showMainProducts();
+
+
+/* CATEGORY */
+
+function openCollection(category){
+
+const filtered=
+products.filter(
+p=>p.category===category
+);
+
+document.getElementById("collectionTitle")
+.innerText=
+category
+.split(" ")
+.map(word =>
+word.charAt(0).toUpperCase()+word.slice(1)
+)
+.join(" ");
+
+
+document.getElementById("collectionGrid")
+.innerHTML=
+filtered.map(productCard).join("");
+
+
+const section=
+document.getElementById("collectionView");
+
+section.classList.add("active");
+
+section.scrollIntoView({
+behavior:"smooth"
+});
+
+}
+
+
+function closeCollection(){
+
+document
+.getElementById("collectionView")
+.classList.remove("active");
+
+}
+
+
+function showAll(){
+
+document
+.getElementById("products")
+.scrollIntoView({
+behavior:"smooth"
+});
+
+}
 
 
 /* SEARCH */
 
-const searchButton =
-document.querySelector(".search");
-
-if(searchButton){
-
-searchButton.style.cursor="pointer";
-
-searchButton.onclick=function(){
+function openSearch(){
 
 document
 .getElementById("searchOverlay")
 .classList.add("active");
 
+setTimeout(function(){
+
 document
 .getElementById("searchInput")
 .focus();
 
-};
+},100);
 
 }
 
@@ -1969,194 +1539,73 @@ document
 
 function searchProducts(){
 
-const query =
+const query=
 document
 .getElementById("searchInput")
 .value
+.trim()
 .toLowerCase();
 
-const results =
+const area=
 document.getElementById("searchResults");
 
-results.innerHTML="";
+if(!query){
 
-if(query.length===0){
-return;
-}
-
-const filtered =
-shrigehnaProducts.filter(product =>
-product.name.toLowerCase().includes(query) ||
-product.category.includes(query)
-);
-
-
-if(filtered.length===0){
-
-results.innerHTML =
-"<p>No jewellery found. Try earrings, rings, necklaces or bangles.</p>";
-
+area.innerHTML="";
 return;
 
 }
 
 
-filtered.forEach(product => {
+const found=
+products.filter(p=>
 
-results.innerHTML += `
+p.name.toLowerCase().includes(query)
 
-<div class="search-item">
+||
 
-<h4>${product.name}</h4>
+p.category.toLowerCase().includes(query)
 
-<p>${product.price}</p>
-
-</div>
-
-`;
-
-});
-
-}
-
-
-/* CATEGORY */
-
-function openCollection(category){
-
-const products =
-shrigehnaProducts.filter(
-product => product.category===category
 );
 
-const grid =
-document.getElementById("collectionGrid");
 
-grid.innerHTML="";
+if(found.length===0){
 
+area.innerHTML=
+"<p>No jewellery found. Try rings, earrings, necklaces or bangles.</p>";
 
-products.forEach(product => {
-
-grid.innerHTML += `
-
-<div class="collection-card">
-
-<img src="${product.image}"
-alt="${product.name}">
-
-<div class="collection-info">
-
-<h3>${product.name}</h3>
-
-<p>${product.price}</p>
-
-<button onclick="addToBag(this)">
-ADD TO BAG
-</button>
-
-</div>
-
-</div>
-
-`;
-
-});
-
-
-document.getElementById("collectionTitle")
-.innerText =
-category.charAt(0).toUpperCase()
-+ category.slice(1);
-
-
-const collection =
-document.getElementById("collectionProducts");
-
-collection.classList.add("active");
-
-collection.scrollIntoView({
-behavior:"smooth"
-});
+return;
 
 }
 
 
-function closeCollection(){
+area.innerHTML=
+found.map(p=>`
 
-document
-.getElementById("collectionProducts")
-.classList.remove("active");
+<div class="search-card">
+
+<h3>${p.name}</h3>
+
+<p>
+${p.price}
+</p>
+
+</div>
+
+`).join("");
 
 }
 
 
-/* CONNECT NAV LINKS */
-
-document
-.querySelectorAll('a[href="#rings"]')
-.forEach(link => {
-
-link.onclick=function(event){
-
-event.preventDefault();
-
-openCollection("rings");
-
-};
-
-});
-
-
-document
-.querySelectorAll('a[href="#earrings"]')
-.forEach(link => {
-
-link.onclick=function(event){
-
-event.preventDefault();
-
-openCollection("earrings");
-
-};
-
-});
-
-
-document
-.querySelectorAll('a[href="#necklaces"]')
-.forEach(link => {
-
-link.onclick=function(event){
-
-event.preventDefault();
-
-openCollection("necklaces");
-
-};
-
-});
-
-
-document
-.querySelectorAll('a[href="#bangles"]')
-.forEach(link => {
-
-link.onclick=function(event){
-
-event.preventDefault();
-
-openCollection("bangles");
-
-};
-
-});
-
-
-/* ADD TO BAG */
+/* BAG */
 
 function addToBag(button){
 
 bagCount++;
+
+document
+.getElementById("bagCount")
+.innerText=bagCount;
 
 button.innerText="ADDED ✓";
 
@@ -2167,10 +1616,48 @@ setTimeout(function(){
 
 button.innerText="ADD TO BAG";
 
-},1500);
+},1200);
+
+}
+
+
+/* WISHLIST */
+
+function toggleWishlist(heart){
+
+if(heart.innerText==="♡"){
+
+heart.innerText="♥";
+heart.style.color="#6b2335";
+
+}
+
+else{
+
+heart.innerText="♡";
+heart.style.color="#292424";
+
+}
+
+}
+
+
+/* NEWSLETTER */
+
+function subscribe(event){
+
+event.preventDefault();
+
+document
+.getElementById("newsletterMessage")
+.innerHTML=
+"<p style='margin-top:15px;color:#e2c1b1;'>Welcome to SHRIGEHNA ✦</p>";
+
+event.target.reset();
 
 }
 
 </script>
+
 </body>
 </html>
